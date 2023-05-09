@@ -3,10 +3,10 @@ import { MeetWithStyle } from "../HomeStyle";
 
 const MeetWith = () => {
   return (
-    <MeetWith>
+    <MeetWithStyle>
       <div>Meet with agency members anytime, anywhere</div>
       <div></div>
-    </MeetWith>
+    </MeetWithStyle>
   );
 };
 
