@@ -1,6 +1,5 @@
-import styled from "styled-components";
-import { COLORS } from "../../styles/COLORS";
-import { FONTS } from "../../styles/FONTS";
+import styled from 'styled-components';
+import { COLORS } from '../../styles/COLORS';
 
 const NavStyle = styled.div`
   display: flex;
@@ -10,7 +9,6 @@ const NavStyle = styled.div`
 
   a {
     color: ${COLORS.LightFont};
-    font-size: ${FONTS.mini};
     text-decoration: none;
     font-weight: 500;
   }

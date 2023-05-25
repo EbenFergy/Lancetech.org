@@ -1,6 +1,7 @@
 import React from "react";
 import { GrowWithStyle } from "../HomeStyle";
 import GrowPNG from "../../../assets/Grow_With.png";
+import growDotPat from "../../../assets/Grow_Dot_Pattern.svg";
 import GrowWith1 from "../../../assets/GrowWith1.svg";
 import GrowWith2 from "../../../assets/GrowWith2.svg";
 import GrowWith3 from "../../../assets/GrowWith3.svg";
@@ -34,7 +35,10 @@ const GrowWith = () => {
           </div>
         </div>
       </div>
-      <img src={GrowPNG} alt="GrowPNG" />
+      <div className="growImgCont">
+        <img src={GrowPNG} alt="GrowPNG" className="GrowPNG" />
+        <img src={growDotPat} alt="growDotPat" className="growDotPat" />
+      </div>
     </GrowWithStyle>
   );
 };
