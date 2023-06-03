@@ -119,11 +119,65 @@ export const TestimonialsStyle = styled.div`
 `;
 
 export const RequestStyle = styled.div`
-  padding: 3rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 5rem 3rem 3rem 3rem;
   background-color: ${COLORS.DarkBlue};
   color: ${COLORS.White};
+  overflow: hidden;
+  /* border: 2px solid red; */
+
+  .requestImg {
+    position: absolute;
+  }
+
+  .requestLeftSVG {
+    top: 5rem;
+    left: 0;
+  }
+
+  .requestRightSVG {
+    bottom: -5rem;
+    right: 0;
+  }
+
+  .requestTop {
+    display: flex;
+    justify-content: space-around;
+    line-height: 28.8px;
+
+    .topLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+
+  .whiteLogo {
+    max-width: 185px;
+  }
 
   .copyright {
     text-align: center;
+    font-size: ${FONTS.mini};
+  }
+
+  #filled-multiline-flexible,
+  #filled-multiline-flexible ::placeholder {
+    color: #ffffff;
+  }
+
+  #filled-multiline-flexible-label {
+    color: rgba(250, 250, 250, 0.5);
+  }
+
+  hr {
+    width: 90%;
+    margin: 2rem;
+    border: none;
+    border-top: 0.5px solid;
+    opacity: 0.2;
   }
 `;

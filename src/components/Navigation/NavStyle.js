@@ -3,6 +3,7 @@ import { COLORS } from '../../styles/COLORS';
 
 const NavStyle = styled.div`
   display: flex;
+  flex-wrap: wrap0;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;
@@ -13,6 +14,9 @@ const NavStyle = styled.div`
     font-weight: 500;
   }
 
+  button {
+    font-weight: 700;
+  }
   .navLinks {
     display: flex;
     gap: 2rem;
