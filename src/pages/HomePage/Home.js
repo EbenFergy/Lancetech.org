@@ -6,10 +6,12 @@ import MeetWith from './Meet with/MeetWith';
 import Testimonials from './Testimonials/Testimonials';
 import SendRequest from './SendRequest/SendRequest';
 import Footer from './Footer/Footer';
+import Discover from './Discover/Discover';
 
 const Home = () => {
   return (
     <HomeStyle>
+      <Discover />
       <JoinFounders />
       <GrowWith />
       <MeetWith />

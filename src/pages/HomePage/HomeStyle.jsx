@@ -16,6 +16,15 @@ export const HomeStyle = styled.div`
   }
 `;
 
+export const DiscoverStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+  }
+`;
+
 export const JoinFoundersStyle = styled.div`
   display: flex;
   flex-direction: column;
@@ -186,7 +195,7 @@ export const FooterStyle = styled.div`
   display: flex;
   justify-content: center;
   gap: 5rem;
-  padding: 7rem 15rem;
+  padding: 5rem 12rem;
 
   .footerChildren {
     display: flex;
