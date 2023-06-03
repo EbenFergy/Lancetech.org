@@ -123,7 +123,7 @@ export const RequestStyle = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 5rem 3rem 3rem 3rem;
+  padding: 5rem 3rem 2rem 3rem;
   background-color: ${COLORS.DarkBlue};
   color: ${COLORS.White};
   overflow: hidden;
@@ -179,5 +179,31 @@ export const RequestStyle = styled.div`
     border: none;
     border-top: 0.5px solid;
     opacity: 0.2;
+  }
+`;
+
+export const FooterStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 7rem 15rem;
+
+  .footerChildren {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: ${FONTS.mini};
+    color: ${COLORS.LightFont};
+  }
+
+  .timeIsThe {
+    line-height: 28px;
   }
 `;

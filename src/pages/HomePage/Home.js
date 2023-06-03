@@ -5,6 +5,7 @@ import GrowWith from './GrowWith/GrowWith';
 import MeetWith from './Meet with/MeetWith';
 import Testimonials from './Testimonials/Testimonials';
 import SendRequest from './SendRequest/SendRequest';
+import Footer from './Footer/Footer';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <MeetWith />
       <Testimonials />
       <SendRequest />
+      <Footer />
     </HomeStyle>
   );
 };
