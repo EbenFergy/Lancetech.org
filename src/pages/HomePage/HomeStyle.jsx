@@ -43,6 +43,10 @@ export const DiscoverStyle = styled.div`
       .discSVG {
         width: 5.5rem;
         box-shadow: 0 32px 54px 0 rgba(68, 140, 179, 0.23);
+
+        :hover {
+          transform: scale(1.1);
+        }
       }
 
       p {
