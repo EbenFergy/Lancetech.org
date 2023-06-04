@@ -13,6 +13,7 @@ export const HomeStyle = styled.div`
   h4 {
     font-size: ${FONTS.small};
     margin: 0;
+    line-height: 34px;
   }
 `;
 
@@ -22,6 +23,36 @@ export const DiscoverStyle = styled.div`
 
   h1 {
     text-align: center;
+  }
+
+  .discDown {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .discChildren {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* border: 2px solid; */
+
+    img {
+      width: 6rem;
+    }
+
+    p {
+      font-size: ${FONTS.mini};
+      color: ${COLORS.LightFont};
+      line-height: 28px;
+    }
+
+    .pCont {
+      max-width: 17rem;
+    }
+
+    img {
+      /* border: 2px solid; */
+    }
   }
 `;
 
