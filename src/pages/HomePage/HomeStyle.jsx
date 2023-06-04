@@ -20,6 +20,9 @@ export const HomeStyle = styled.div`
 export const DiscoverStyle = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 4rem;
+  padding: 4rem;
+  /* border: 2px solid; */
 
   h1 {
     text-align: center;
@@ -28,30 +31,57 @@ export const DiscoverStyle = styled.div`
   .discDown {
     display: flex;
     justify-content: center;
-    gap: 5rem;
-  }
-  .discChildren {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    /* border: 2px solid; */
+    gap: 6rem;
 
-    img {
-      width: 6rem;
-    }
-
-    p {
-      font-size: ${FONTS.mini};
-      color: ${COLORS.LightFont};
-      line-height: 28px;
-    }
-
-    .pCont {
-      max-width: 17rem;
-    }
-
-    img {
+    .discChildren {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: relative;
       /* border: 2px solid; */
+
+      .discSVG {
+        width: 5.5rem;
+        box-shadow: 0 32px 54px 0 rgba(68, 140, 179, 0.23);
+      }
+
+      p {
+        font-size: ${FONTS.mini};
+        color: ${COLORS.LightFont};
+        line-height: 28px;
+      }
+
+      .pCont {
+        max-width: 17rem;
+      }
+
+      .ArrowSVG {
+        position: absolute;
+        top: 2rem;
+        right: -4rem;
+
+        img {
+          width: 14rem;
+          height: 4.5rem;
+
+          /* width: clamp(7rem, 80%, 13rem); */
+        }
+      }
+
+      img {
+        /* border: 2px solid; */
+      }
+    }
+
+    #discChild2 {
+      margin-top: 5rem;
+      #ArrowSVG2 {
+        transform: scaleY(-1) rotate(-30deg);
+      }
+    }
+
+    #discChild3 {
+      margin-top: 10rem;
     }
   }
 `;
