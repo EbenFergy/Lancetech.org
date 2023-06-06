@@ -198,7 +198,7 @@ export const RequestStyle = styled.div`
   flex-direction: column;
   gap: 4rem;
   padding: 5rem 3rem 2rem 3rem;
-  background-color: ${COLORS.DarkBlue};
+  background-color: ${COLORS.DarkBlue2};
   color: ${COLORS.White};
   overflow: hidden;
   /* border: 2px solid red; */

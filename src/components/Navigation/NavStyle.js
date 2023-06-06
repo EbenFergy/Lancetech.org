@@ -7,6 +7,9 @@ const NavStyle = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;
+  position: absolute;
+  left: 0;
+  right: 0;
 
   a {
     color: ${COLORS.LightFont};

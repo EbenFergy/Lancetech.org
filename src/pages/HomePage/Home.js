@@ -1,5 +1,6 @@
 import React from 'react';
 import { HomeStyle } from './HomeStyle';
+import Header from './Header/Header';
 import JoinFounders from './JoinFounders/JoinFounders';
 import GrowWith from './GrowWith/GrowWith';
 import MeetWith from './Meet with/MeetWith';
@@ -11,6 +12,7 @@ import Discover from './Discover/Discover';
 const Home = () => {
   return (
     <HomeStyle>
+      <Header />
       <Discover />
       <JoinFounders />
       <GrowWith />
