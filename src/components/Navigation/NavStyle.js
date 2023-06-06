@@ -10,6 +10,7 @@ const NavStyle = styled.div`
   position: absolute;
   left: 0;
   right: 0;
+  z-index: 10;
 
   a {
     color: ${COLORS.LightFont};
