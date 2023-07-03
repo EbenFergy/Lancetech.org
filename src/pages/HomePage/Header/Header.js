@@ -1,13 +1,18 @@
 import React from 'react';
 import { HeaderStyle } from './HeaderStyle';
+import Header1img from '../../../assets/Header1.svg';
+import Header2img from '../../../assets/Header2.svg';
 
 const Header = () => {
   return (
     <HeaderStyle>
       <h2>
-        Graphic design illustrations <br />
-        <span> mobile and web app </span>
+        Product design, <br />
+        <span> Mobile and Web apps </span>
       </h2>
+      {/* <div className="headerImg">
+        <img src={Header1img} alt="headerImg" />
+      </div> */}
       <div class="waveSVG">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path

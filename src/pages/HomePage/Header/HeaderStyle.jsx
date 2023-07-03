@@ -7,8 +7,10 @@ export const HeaderStyle = styled.div`
   height: 50rem;
   position: relative;
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
+  margin-bottom: 15rem;
 
   h2 {
     color: #def4ff;
@@ -18,6 +20,19 @@ export const HeaderStyle = styled.div`
 
     span {
       color: ${COLORS.LightBlue};
+    }
+  }
+
+  .headerImg {
+    position: absolute;
+    bottom: -15rem;
+    right: -10rem;
+    transform: rotate(15deg);
+    z-index: 10;
+    align-items: center;
+
+    img {
+      width: 38rem;
     }
   }
 
@@ -39,6 +54,6 @@ export const HeaderStyle = styled.div`
   }
 
   .waveSVG .shape-fill {
-    fill: #020817;
+    fill: ${COLORS.DarkBlue3};
   }
 `;

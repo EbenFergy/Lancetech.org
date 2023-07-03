@@ -1,8 +1,8 @@
-import React from "react";
-import { MeetWithStyle } from "../HomeStyle";
-import MeetPNG from "../../../assets/Meet_With.png";
-import meetDotPat from "../../../assets/Meet_Dot_Pattern.svg";
-import Button from "../../../components/Button/Button";
+import React from 'react';
+import { MeetWithStyle } from '../HomeStyle';
+import MeetPNG from '../../../assets/Meet_With.png';
+import meetDotPat from '../../../assets/Meet_Dot_Pattern.svg';
+import Button from '../../../components/Button/Button';
 
 const MeetWith = () => {
   return (
@@ -19,22 +19,18 @@ const MeetWith = () => {
 
       <div className="meetRight">
         <p className="meetFirstP">
-          Designers and programmers and managers have become so accustomed to
-          working remotely, even for complex changing Lorem ipsum dolor sit amet
-          consectetur, adipisicing elit. Enim magni quo ab non? Error qui, iste
-          consequuntur quasi <br />
-          <br /> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim
-          magni quo ab non? Error qui, iste consequuntur quasi
+          Designers and programmers and managers have become so accustomed to working remotely, even for complex changing Lorem ipsum dolor
+          sit amet consectetur, adipisicing elit. Enim magni quo ab non? Error qui, iste consequuntur quasi <br />
+          <br /> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim magni quo ab non? Error qui, iste consequuntur quasi
         </p>
         <div>
           <Button>Get Started for Free</Button>
         </div>
         <p className="meetSecondP">
-          “The following article covers a topic that has recently moved to
-          center stage–at least it seems that way. If you’ve been thinking you
-          need to know more about outsourcing, here’s your opportunity.”
+          “The following article covers a topic that has recently moved to center stage–at least it seems that way. If you’ve been thinking
+          you need to know more about outsourcing, here’s your opportunity.”
         </p>
-        <h4>Ferguson, Founder of Lancetech</h4>
+        <h4>Daniel, Product Manager, Lancetech</h4>
       </div>
     </MeetWithStyle>
   );
