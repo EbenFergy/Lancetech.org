@@ -1,7 +1,7 @@
 import React from 'react';
 import { HeaderStyle } from './HeaderStyle';
-import Header1img from '../../../assets/Header1.svg';
-import Header2img from '../../../assets/Header2.svg';
+// import Header1img from '../../../assets/Header1.svg';
+// import Header2img from '../../../assets/Header2.svg';
 
 const Header = () => {
   return (

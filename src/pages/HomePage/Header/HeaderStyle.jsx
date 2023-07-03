@@ -4,7 +4,7 @@ import { COLORS } from '../../../styles/COLORS';
 export const HeaderStyle = styled.div`
   background-color: ${COLORS.DarkBlue3};
   color: ${COLORS.White};
-  height: 50rem;
+  height: 55rem;
   position: relative;
   display: flex;
   /* flex-direction: column; */
