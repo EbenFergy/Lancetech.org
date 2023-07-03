@@ -10,7 +10,6 @@ export const HeaderStyle = styled.div`
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  margin-bottom: 15rem;
 
   h2 {
     color: #def4ff;
