@@ -3,6 +3,8 @@ import { FONTS } from '../../styles/FONTS';
 import { COLORS } from '../../styles/COLORS';
 
 export const HomeStyle = styled.div`
+  overflow: hidden;
+
   h1 {
     font-size: ${FONTS.large};
     font-weight: 700;
