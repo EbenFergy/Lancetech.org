@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { FONTS } from '../../../styles/FONTS';
 
 export const TeamStyle = styled.div`
   background-color: #f4f4f4;
