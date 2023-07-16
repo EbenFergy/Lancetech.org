@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { FONTS } from '../../styles/FONTS';
 import { COLORS } from '../../styles/COLORS';
+import { zoomIn } from '../../styles/ANIMATION';
 
 export const HomeStyle = styled.div`
   overflow: hidden;
@@ -40,15 +41,16 @@ export const DiscoverStyle = styled.div`
       flex-direction: column;
       gap: 1rem;
       position: relative;
-      /* border: 2px solid; */
+
+      :hover {
+        .h4 {
+          transform: scale(1.5);
+        }
+      }
 
       .discSVG {
         width: 5.5rem;
         box-shadow: 0 32px 54px 0 rgba(68, 140, 179, 0.23);
-
-        :hover {
-          transform: scale(1.1);
-        }
       }
 
       p {

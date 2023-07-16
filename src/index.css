@@ -4,6 +4,8 @@ body {
     'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 code {

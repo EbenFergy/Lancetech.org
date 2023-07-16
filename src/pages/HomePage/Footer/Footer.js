@@ -6,16 +6,8 @@ const Footer = () => {
     <FooterStyle>
       <div className="footerChildren">
         <h4>Community</h4>
-        <p>Our Designers</p>
-        <p>Our Developers</p>
-        <p> Our Product managers</p>
-        <p>FAQ</p>
-      </div>
-      <div className="footerChildren">
-        <h4>About us</h4>
-        <p>Meet the Founders</p>
+        <p>Meet Us</p>
         <p>Our Story</p>
-        <p>Career</p>
       </div>
       <div className="footerChildren">
         <h4>Useful</h4>

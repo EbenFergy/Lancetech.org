@@ -8,6 +8,7 @@ import Testimonials from './Testimonials/Testimonials';
 import SendRequest from './SendRequest/SendRequest';
 import Footer from './Footer/Footer';
 import Discover from './Discover/Discover';
+import Team from './TheTeam/Team';
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <GrowWith />
       <MeetWith />
       <Testimonials />
+      <Team />
       <SendRequest />
       <Footer />
     </HomeStyle>
