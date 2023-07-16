@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { FONTS } from '../../styles/FONTS';
 import { COLORS } from '../../styles/COLORS';
-import { zoomIn } from '../../styles/ANIMATION';
 
 export const HomeStyle = styled.div`
   overflow: hidden;
