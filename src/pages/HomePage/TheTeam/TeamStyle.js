@@ -2,7 +2,12 @@ import styled from 'styled-components';
 
 export const TeamStyle = styled.div`
   background-color: #f4f4f4;
-  padding: 8rem 15rem;
+
+  .teamWrapper {
+    padding: 8rem 15rem;
+    max-width: 1440px;
+    margin: auto;
+  }
 
   .teamGallery {
     display: flex;

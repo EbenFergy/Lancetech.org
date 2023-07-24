@@ -105,13 +105,17 @@ export const JoinFoundersStyle = styled.div`
 `;
 
 export const GrowWithStyle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
   background: #f9fafa;
-  padding: 7rem 5rem 3rem 5rem;
-  /* border: 2px solid red; */
+
+  .GrowWithWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 7rem 5rem 3rem 5rem;
+    max-width: 1920px;
+    margin: auto;
+  }
 
   .growWithChild {
     display: flex;
@@ -137,13 +141,17 @@ export const GrowWithStyle = styled.div`
 `;
 
 export const MeetWithStyle = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  gap: 2rem;
   background: #f9fafa;
-  padding: 3rem 5rem;
-  /* border: 2px solid red; */
+
+  .MeetWithWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 3rem 5rem;
+    max-width: 1920px;
+    margin: auto;
+  }
 
   .meetLeft {
     /* border: 2px solid red; */
@@ -193,19 +201,24 @@ export const MeetWithStyle = styled.div`
 export const TestimonialsStyle = styled.div`
   justify-content: space-around;
   padding: 5rem 10rem;
+  max-width: 1920px;
+  margin: auto;
 `;
 
 export const RequestStyle = styled.div`
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-  padding: 5rem 3rem 2rem 3rem;
   background-color: ${COLORS.DarkBlue2};
-  color: ${COLORS.White};
-  overflow: hidden;
-  /* border: 2px solid red; */
+  position: relative;
 
+  .requestWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem 3rem 2rem 3rem;
+    color: ${COLORS.White};
+    overflow: hidden;
+    max-width: 1920px;
+    margin: auto;
+  }
   .requestImg {
     position: absolute;
   }
@@ -264,6 +277,8 @@ export const FooterStyle = styled.div`
   justify-content: center;
   gap: 5rem;
   padding: 5rem 12rem;
+  max-width: 1920px;
+  margin: auto;
 
   .footerChildren {
     display: flex;
