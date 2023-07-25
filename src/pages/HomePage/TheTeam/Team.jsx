@@ -14,7 +14,7 @@ const Team = () => {
           {TeamList.map(member => (
             <div>
               <div className="teamMember">
-                <img src="https://drive.google.com/file/d/1kevxiwz1fB0z9-f9MO8XzTZZI_R88MJE/view" alt="teamMember" />
+                <img src={member.memberImg} alt="teamMember" />
               </div>
               <div className="nameAndTitle">
                 <div className="memberName">{member.memberName}</div>
