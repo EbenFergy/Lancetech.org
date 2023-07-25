@@ -10,19 +10,19 @@ export const TeamStyle = styled.div`
   }
 
   .teamGallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     gap: 2.5rem;
     margin: 3rem 0;
 
     .teamMember {
-      width: 12rem;
+      /* width: 12rem; */
+      /* display: flex;
+      justify-content: center; */
+      align-items: center;
       height: 15rem;
       border-radius: 5px;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
     .memberName {
@@ -36,6 +36,13 @@ export const TeamStyle = styled.div`
 
     .nameAndTitle {
       margin: 1rem 0;
+    }
+
+    @media only screen and (max-width: 740px) {
+      .teamMember {
+        display: flex;
+        justify-content: center;
+      }
     }
   }
 `;
