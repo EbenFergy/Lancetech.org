@@ -1,7 +1,6 @@
 import React from 'react';
 import { TeamStyle } from './TeamStyle';
-import DanielImg from '../../../assets/TeamPictures/DanielOsemeke.png';
-import OsasImg from '../../../assets/TeamPictures/OsasFerguson.png';
+import { TeamList } from './__fixtures__/Team.fixtures.ts';
 
 const Team = () => {
   return (
@@ -12,70 +11,17 @@ const Team = () => {
         </h1>
         <hr />
         <div className="teamGallery">
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
+          {TeamList.map(member => (
+            <div>
+              <div className="teamMember">
+                <img src="https://drive.google.com/file/d/1kevxiwz1fB0z9-f9MO8XzTZZI_R88MJE/view" alt="teamMember" />
+              </div>
+              <div className="nameAndTitle">
+                <div className="memberName">{member.memberName}</div>
+                <div className="memberTitle">{member.memberTitle}</div>
+              </div>
             </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Omon Imaralu</div>
-              <div className="memberTitle">Product Manager</div>
-            </div>
-          </div>
-          <div>
-            <div className="teamMember">
-              <img src={OsasImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Osas Ferguson</div>
-              <div className="memberTitle">Software Engineer</div>
-            </div>
-          </div>
-
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Daniel Osemeke</div>
-              <div className="memberTitle">UX Designer/Product Manager</div>
-            </div>
-          </div>
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Daniel Osemeke</div>
-              <div className="memberTitle">Product Manager</div>
-            </div>
-          </div>
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Daniel Osemeke</div>
-              <div className="memberTitle">Product Manager</div>
-            </div>
-          </div>
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Daniel Osemeke</div>
-              <div className="memberTitle">Product Manager</div>
-            </div>
-          </div>
-          <div>
-            <div className="teamMember">
-              <img src={DanielImg} alt="teamMember" />
-            </div>
-            <div className="nameAndTitle">
-              <div className="memberName">Daniel Osemeke</div>
-              <div className="memberTitle">Product Manager</div>
-            </div>
-          </div>
+          ))}
         </div>
         <hr />
       </div>
