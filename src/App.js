@@ -1,19 +1,21 @@
-import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./pages/about/About";
-import ContactUs from "./pages/contactUs/ContactUs";
-import Home from "./pages/HomePage/Home";
-import Root from "./routes/Root";
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './pages/about/About';
+import ContactUs from './pages/contactUs/ContactUs';
+import Home from './pages/HomePage/Home';
+import Root from './routes/Root';
+import RolesPage from './pages/roles/rolesPage.tsx';
 
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: "",
+      path: '',
       element: <Root />,
       children: [
-        { path: "", element: <Home /> },
-        { path: "/about", element: <About /> },
-        { path: "/contact", element: <ContactUs /> },
+        { path: '', element: <Home /> },
+        { path: '/about', element: <About /> },
+        { path: '/contact', element: <ContactUs /> },
+        { path: '/roles', element: <RolesPage /> },
       ],
     },
   ]);
