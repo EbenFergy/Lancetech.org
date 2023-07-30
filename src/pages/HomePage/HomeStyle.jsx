@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FONTS } from '../../styles/FONTS';
-import { COLORS } from '../../styles/COLORS';
+import { FONTS } from '../../styles/FONTS.ts';
+import { COLORS } from '../../styles/COLORS.ts';
 
 export const HomeStyle = styled.div`
   overflow: hidden;

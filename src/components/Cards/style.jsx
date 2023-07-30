@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { COLORS } from "../../styles/COLORS";
-import { FONTS } from "../../styles/FONTS";
-import { SHADOWS } from "../../styles/SHADOWS";
+import styled from 'styled-components';
+import { COLORS } from '../../styles/COLORS.ts';
+import { FONTS } from '../../styles/FONTS.ts';
+import { SHADOWS } from '../../styles/SHADOWS.ts';
 
 export const Style = styled.div`
   width: 20rem;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../styles/COLORS';
+import { COLORS } from '../../styles/COLORS.ts';
 
 const Button = styled.button`
   width: auto;

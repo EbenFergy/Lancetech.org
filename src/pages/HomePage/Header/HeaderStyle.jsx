@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { COLORS } from '../../../styles/COLORS';
+import { COLORS } from '../../../styles/COLORS.ts';
 import { movingShape, bouncingShape, rotate, increaseWidth } from '../../../styles/ANIMATION';
 
 export const HeaderStyle = styled.div`

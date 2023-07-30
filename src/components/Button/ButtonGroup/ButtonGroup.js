@@ -3,7 +3,7 @@ import BtnGroupStyle from './BtnGroupStyle';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 import IconButton from '@mui/material/IconButton';
-import { COLORS } from '../../../styles/COLORS';
+import { COLORS } from '../../../styles/COLORS.ts';
 
 export const LeftBtn = ({ onClick }) => {
   return (

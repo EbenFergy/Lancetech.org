@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { FONTS } from '../../styles/FONTS';
-import { COLORS } from '../../styles/COLORS';
+import { FONTS } from '../../styles/FONTS.ts';
+import { COLORS } from '../../styles/COLORS.ts';
 
 export const AboutStyle = styled.div`
   padding: 2rem 4rem;
@@ -8,7 +8,6 @@ export const AboutStyle = styled.div`
     font-size: ${FONTS.large};
     font-weight: 700;
     line-height: 64px;
-    color: ${COLORS.LightHeader};
   }
 
   h4 {
