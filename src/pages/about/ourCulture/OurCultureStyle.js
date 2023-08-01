@@ -1,26 +1,42 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../styles/COLORS.ts';
-import { FONTS } from '../../../styles/FONTS.ts';
 
 export const OurCultureStyle = styled.div`
   background-color: ${COLORS.DarkBlue3};
   color: ${COLORS.White};
-  padding: 2rem;
+  padding: 6rem 6rem;
 
-  h2 {
-    font-size: ${FONTS.medium};
-  }
-  h4 {
-    font-size: ${FONTS.small};
-  }
-  p {
-    font-size: ${FONTS.mini};
-    text-align: justify;
+  > div {
+    max-width: 1440px;
   }
 
   .cultureMid {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
     .cultureMidLeft {
-      max-width: 20rem;
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: space-between;
+
+      .cultureMidLeftSub {
+        display: flex;
+      }
+
+      .cultures {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        max-width: 15rem;
+      }
+    }
+
+    .ourCultureImg {
+      height: 30rem;
+      border: 2px solid;
     }
   }
 `;

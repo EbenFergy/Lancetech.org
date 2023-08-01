@@ -4,6 +4,7 @@ import Button from '../../components/Button/Button';
 import TorusImage from '../../assets/Torus.svg';
 import OurCulture from './ourCulture/OurCulture';
 import { useNavigate } from 'react-router-dom';
+import OurTeams from './ourTeams/OurTeams';
 
 const About = () => {
   const navigate = useNavigate();
@@ -19,9 +20,11 @@ const About = () => {
         </h1>
         <Button onClick={handleNavigate}> See Open Roles</Button>
       </div>
-
-      <img src={TorusImage} alt="torusImage" className="headerImg torusImg2" />
+      <div style={{ overflow: 'hidden' }}>
+        <img src={TorusImage} alt="torusImage" className="headerImg torusImg2" />
+      </div>
       <OurCulture toRoles={handleNavigate} />
+      <OurTeams />
     </AboutStyle>
   );
 };

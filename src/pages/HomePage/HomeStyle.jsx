@@ -141,7 +141,7 @@ export const GrowWithStyle = styled.div`
 `;
 
 export const MeetWithStyle = styled.div`
-  background: #f9fafa;
+  background: ${COLORS.LightBackground};
 
   .MeetWithWrapper {
     display: flex;

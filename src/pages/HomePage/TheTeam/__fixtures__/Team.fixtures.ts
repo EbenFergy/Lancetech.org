@@ -1,5 +1,5 @@
 // @ts-ignore
-import { GoogleURLConverter } from '../helpers/GoogleURLConverter.ts';
+import { GoogleURLConverter } from '../../../../core/helpers/GoogleURLConverter.ts';
 
 export const TeamList: { memberName: string; memberTitle: string; memberImg: string }[] = [
   {

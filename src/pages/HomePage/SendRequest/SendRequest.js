@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { RequestStyle } from '../HomeStyle';
 import LancetechLOGO from '../../../assets/LancetechWhite.png';
 import Button from '../../../components/Button/Button';
@@ -7,6 +7,13 @@ import leftSVG from '../../../assets/SendRequest/left.svg';
 import rightSVG from '../../../assets/SendRequest/right.svg';
 
 const SendRequest = () => {
+  const [currentYear, setCurrentYear] = useState();
+
+  useEffect(() => {
+    const today = new Date();
+    const year = today.getFullYear();
+    setCurrentYear(year);
+  }, []);
   return (
     <RequestStyle>
       <div className="requestWrapper">
@@ -40,7 +47,7 @@ const SendRequest = () => {
           </div>
         </div>
         <div className="copyright">
-          <div>Copyright © 2021 Lancetech. All rights reserved</div>
+          <div>Copyright © {currentYear} Lancetech. All rights reserved</div>
           <hr />
         </div>
         <div className="requestImg requestLeftSVG">

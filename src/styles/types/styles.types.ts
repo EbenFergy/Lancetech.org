@@ -13,6 +13,7 @@ export interface ColorsType {
   DarkBlue3: string;
   DarkBlue4: string;
   White: string;
+  LightBackground: string;
 }
 
 /**
@@ -21,6 +22,7 @@ export interface ColorsType {
 export interface FontsType {
   large: string;
   medium: string;
+  midSmall: string;
   small: string;
   mini: string;
 }
