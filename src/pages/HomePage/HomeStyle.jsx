@@ -271,31 +271,3 @@ export const RequestStyle = styled.div`
     opacity: 0.2;
   }
 `;
-
-export const FooterStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 5rem;
-  padding: 5rem 12rem;
-  max-width: 1920px;
-  margin: auto;
-
-  .footerChildren {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h4 {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  p {
-    font-size: ${FONTS.mini};
-    color: ${COLORS.LightFont};
-  }
-
-  .timeIsThe {
-    line-height: 28px;
-  }
-`;

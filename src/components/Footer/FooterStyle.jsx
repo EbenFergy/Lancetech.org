@@ -1,25 +1,40 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import { FONTS } from '../../styles/FONTS.ts';
+import { COLORS } from '../../styles/COLORS.ts';
 
 const FooterStyle = styled.div`
-  width: 100%;
-  margin-top: 2rem;
-  padding: 5rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  background-color: rgba(14, 17, 26, 1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
-  font-size: 0.8rem;
-  font-weight: 100;
+  gap: 5rem;
+  padding: 5rem 12rem;
+  max-width: 1920px;
+  margin: auto;
+
+  .footerChildren {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: ${FONTS.mini};
+    color: ${COLORS.LightFont};
+  }
+
+  .timeIsThe {
+    line-height: 28px;
+  }
 
   svg {
     width: 1.2rem;
-    color: #ffffff;
+    :hover {
+      opacity: 0.7;
+    }
   }
-
   .footerIcons {
     display: flex;
     align-items: center;
