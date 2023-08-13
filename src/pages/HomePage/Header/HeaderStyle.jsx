@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { COLORS } from '../../../styles/COLORS.ts';
 import { movingShape, bouncingShape, rotate, increaseWidth } from '../../../styles/ANIMATION';
 
+const { DarkBlue4, DarkBlue3, MainBlue } = COLORS;
+
 export const HeaderStyle = styled.div`
-  background-color: ${COLORS.DarkBlue3};
+  background-color: ${COLORS.DarkBlue4};
   color: ${COLORS.White};
   height: 55rem;
   position: relative;

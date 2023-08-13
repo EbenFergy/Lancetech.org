@@ -5,6 +5,7 @@ import ContactUs from './pages/contactUs/ContactUs';
 import Home from './pages/HomePage/Home';
 import Root from './routes/Root';
 import RolesPage from './pages/roles/rolesPage.tsx';
+import FooterPages from './routes/FooterPages';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -12,10 +13,17 @@ const App = () => {
       path: '',
       element: <Root />,
       children: [
-        { path: '', element: <Home /> },
-        { path: '/about', element: <About /> },
+        {
+          path: '',
+          element: <FooterPages />,
+          children: [
+            { path: '', element: <Home /> },
+            { path: '/about', element: <About /> },
+            { path: '/roles', element: <RolesPage /> },
+          ],
+        },
+
         { path: '/contact', element: <ContactUs /> },
-        { path: '/roles', element: <RolesPage /> },
       ],
     },
   ]);

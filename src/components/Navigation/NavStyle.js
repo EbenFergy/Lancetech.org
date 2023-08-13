@@ -7,7 +7,7 @@ const NavStyle = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;
-  position: absolute;
+  position: fixed;
   left: 0;
   right: 0;
   z-index: 10;
