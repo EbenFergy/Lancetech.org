@@ -1,52 +1,83 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, TextField } from '@mui/material';
 import ContactUsStyle from './ContactUsStyle.js';
-import { HeaderStyle } from '../HomePage/Header/HeaderStyle.jsx';
-import TorusImage from '../../assets/Torus.svg';
-import EllipseImage from '../../assets/Ellipse.svg';
-import Header2 from '../../assets/Header2.svg';
 import Header1 from '../../assets/Header1.svg';
 import * as Yup from 'yup';
+import { useFormik } from 'formik';
 import { Formik, Form } from 'formik';
 import { FormCont } from '../../components/Formik/FormStyle.jsx';
 import FormikControl from '../../components/Formik/FormikControl.js';
+import MuiPhoneNumber from 'material-ui-phone-number';
+import { Button } from '../../components/Formik/FormStyle.jsx';
+
+const validationSchema = Yup.object({
+  yourName: Yup.string().required('Please put in your name'),
+  email: Yup.string().email('Enter valid email').required('Required'),
+  // phoneNumber: Yup.string().optional(),
+});
 
 const ContactUs = () => {
-  const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
+  const formik = useFormik({
+    initialValues: {
+      yourName: '',
+      email: '',
+      // phoneNumber: '',
+    },
 
-  const initialValues = {
-    yourName: '',
-    yourEmail: '',
-    phoneNumber: '',
-  };
+    validationSchema: validationSchema,
 
-  const validationSchema = Yup.object({
-    yourName: Yup.string().required('Please put in your name'),
-    yourEmail: Yup.string().email('Enter valid email').required('Required'),
-    phoneNumber: Yup.string().required('phone number is not valid'),
+    onSubmit: values => {
+      console.log('values from contact page Form', values);
+    },
+
+    handlePhoneNumber: e => {
+      console.log('phone number', e);
+    },
   });
-
-  const onSubmit = (values, { resetForm }) => {
-    console.log('values from Testimonial Form', values);
-    resetForm({ values: '' });
-  };
 
   return (
     <ContactUsStyle>
-      <Box className="contactUsLeft" sx={{}}>
-        <FormCont>
-          <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-            {formik => {
-              return (
-                <Form>
-                  <FormikControl control="input" name="yourName" label="yourName" placeholder="Your Name" />;
-                  <FormikControl control="input" name="yourEmail" label="yourEmail" placeholder="Your Email" />;
-                  <FormikControl control="input" name="phoneNumber" label="phoneNumber" placeholder="Phone Number" />;
-                </Form>
-              );
-            }}
-          </Formik>
-        </FormCont>
+      <Box className="contactUsLeft" sx={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
+          <TextField
+            fullWidth
+            id="yourName"
+            name="yourName"
+            label="Name"
+            sx={{ mb: '2rem', color: 'white' }}
+            value={formik.values.yourName}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.yourName && Boolean(formik.errors.yourName)}
+            helperText={formik.touched.yourName && formik.errors.yourName}
+          />
+          <TextField
+            fullWidth
+            id="email"
+            name="email"
+            label="Email"
+            value={formik.values.email}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+          />
+
+          <MuiPhoneNumber
+            fullWidth
+            variant="outlined"
+            defaultCountry={'us'}
+            disableAreaCodes={true}
+            // name="phoneNumber"
+            label="Phone number"
+            // value={formik.values.phoneNumber}
+            onChange={formik.handlePhoneNumber}
+            // onBlur={formik.handleBlur}
+            // error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
+            // helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
+          />
+          <Button type="submit">Submit</Button>
+        </form>
       </Box>
       <Box className="contactUsRight">
         <img src={Header1} style={{ width: '80%' }} />

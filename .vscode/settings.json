@@ -1,0 +1,11 @@
+{
+  "prettier.printWidth": 80,
+  "prettier.singleAttributePerLine": true,
+  "prettier.useTabs": true,
+  "prettier.withNodeModules": true,
+  "prettier.bracketSameLine": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.endOfLine": "auto",
+  "prettier.jsxSingleQuote": false,
+  "prettier.proseWrap": "always"
+}

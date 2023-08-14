@@ -7,8 +7,9 @@ import { COLORS } from '../../../styles/COLORS.ts';
 import { GoogleURLConverter } from '../../../core/helpers/GoogleURLConverter.ts';
 
 const OurCulture = ({ toRoles }) => {
-  const cultureImgURL = GoogleURLConverter('https://drive.google.com/file/d/1brd5hxoOjlvQU1zBc2Y7wSRkrpggVbCq/view?usp=drive_link');
+  const cultureImgURL = GoogleURLConverter('https://drive.google.com/file/d/1VYaBtUK7j1r_pcB49cchzgTx0lGt0XVG/view?usp=sharing');
   console.log('cultureImgURL', cultureImgURL);
+
   return (
     <OurCultureStyle>
       <Box sx={{ m: 'auto' }}>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Field, ErrorMessage } from 'formik';
 import { ErrorStyle, InputStyle } from './FormStyle';
+import { TextField } from '@mui/material';
 
 const Input = ({ name, label, ...rest }) => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -41,7 +42,9 @@ const Input = ({ name, label, ...rest }) => {
       ) : (
         <InputStyle>
           <label htmlFor={name}>{label}</label>
-          <Field id={name} name={name} {...rest} />
+          <Field name={name} {...rest}>
+            {({ name, field }) => <TextField {...rest} />}
+          </Field>
           <ErrorMessage name={name} component={ErrorStyle} />
         </InputStyle>
       )}

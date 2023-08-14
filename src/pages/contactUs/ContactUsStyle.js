@@ -11,9 +11,11 @@ const ContactUsStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 4rem;
+    box-sizing: border-box;
     width: 50%;
     background: rgb(2, 0, 36);
-    background: linear-gradient(180deg, ${DarkBlue4} 40%, ${MainBlue} 100%);
+    background: linear-gradient(180deg, ${DarkBlue3} 40%, ${MainBlue} 100%);
   }
 
   .contactUsRight {

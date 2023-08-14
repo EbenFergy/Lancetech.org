@@ -5,7 +5,7 @@ import { movingShape, bouncingShape, rotate, increaseWidth } from '../../../styl
 const { DarkBlue4, DarkBlue3, MainBlue } = COLORS;
 
 export const HeaderStyle = styled.div`
-  background-color: ${COLORS.DarkBlue4};
+  background-color: ${DarkBlue3};
   color: ${COLORS.White};
   height: 55rem;
   position: relative;
