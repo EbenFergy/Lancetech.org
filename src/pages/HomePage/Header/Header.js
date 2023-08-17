@@ -5,7 +5,7 @@ import EllipseImage from '../../../assets/Ellipse.svg';
 import { COLORS } from '../../../styles/COLORS.ts';
 
 const Header = () => {
-  const { DarkBlue4, DarkBlue3, MainBlue } = COLORS;
+  const { DarkBlue3 } = COLORS;
 
   return (
     <HeaderStyle>
