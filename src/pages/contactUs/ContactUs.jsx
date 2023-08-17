@@ -46,6 +46,9 @@ const ContactUs = () => {
       // border: '2px solid green',
       color: FadedWhite,
     },
+    '& .MuiInputBase-input': {
+      color: FadedWhite,
+    },
 
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
