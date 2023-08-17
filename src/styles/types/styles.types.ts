@@ -14,6 +14,7 @@ export interface ColorsType {
   DarkBlue4: string;
   White: string;
   LightBackground: string;
+  FadedWhite: string;
 }
 
 /**

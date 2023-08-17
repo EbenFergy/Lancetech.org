@@ -12,5 +12,6 @@ export const COLORS: ColorsType = {
   DarkBlue3: '#020B24',
   DarkBlue4: '#0b193D',
   White: '#FFFFFF',
+  FadedWhite: '#e6e6e6',
   LightBackground: '#f9fafa',
 };

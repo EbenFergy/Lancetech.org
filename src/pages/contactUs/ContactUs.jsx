@@ -1,14 +1,10 @@
 import React from 'react';
-import { Box, Typography, TextField } from '@mui/material';
+import { Box, Typography, TextField, Icon, Button } from '@mui/material';
 import ContactUsStyle from './ContactUsStyle.js';
-import Header1 from '../../assets/Header1.svg';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
-import { Formik, Form } from 'formik';
-import { FormCont } from '../../components/Formik/FormStyle.jsx';
-import FormikControl from '../../components/Formik/FormikControl.js';
 import MuiPhoneNumber from 'material-ui-phone-number';
-import { Button } from '../../components/Formik/FormStyle.jsx';
+import { COLORS } from '../../styles/COLORS.ts';
 
 const validationSchema = Yup.object({
   yourName: Yup.string().required('Please put in your name'),
@@ -17,6 +13,8 @@ const validationSchema = Yup.object({
 });
 
 const ContactUs = () => {
+  const { LightFont, FadedWhite, LightBlue, LightGrey, MainBlue } = COLORS;
+
   const formik = useFormik({
     initialValues: {
       yourName: '',
@@ -35,16 +33,53 @@ const ContactUs = () => {
     },
   });
 
+  const textFieldStyles = {
+    width: '100%',
+
+    '& label.Mui-focused': {
+      color: LightFont,
+    },
+    '&  label': {
+      color: LightFont,
+    },
+    '& input': {
+      // border: '2px solid green',
+      color: FadedWhite,
+    },
+
+    '& .MuiOutlinedInput-root': {
+      '& fieldset': {
+        border: '0.5px solid',
+        borderColor: LightGrey,
+      },
+      '&:hover fieldset': {
+        borderColor: LightBlue,
+      },
+      '& ::placeholder': {
+        color: LightFont,
+      },
+    },
+  };
+
   return (
     <ContactUsStyle>
       <Box className="contactUsLeft" sx={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-        <form onSubmit={formik.handleSubmit} style={{ width: '100%' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, width: '100%', maxWidth: '50rem' }}>
+          <Icon sx={{ height: 'fit-content', fontSize: '4rem' }}>connect_without_contact</Icon>
+          <Typography variant="h3" sx={{ fontFamily: 'inherit' }}>
+            Let's level up your <br /> brand, together
+          </Typography>
+        </Box>
+        <form
+          onSubmit={formik.handleSubmit}
+          style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '50rem' }}
+        >
           <TextField
             fullWidth
             id="yourName"
             name="yourName"
             label="Name"
-            sx={{ mb: '2rem', color: 'white' }}
+            sx={textFieldStyles}
             value={formik.values.yourName}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -56,6 +91,7 @@ const ContactUs = () => {
             id="email"
             name="email"
             label="Email"
+            sx={textFieldStyles}
             value={formik.values.email}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
@@ -70,18 +106,25 @@ const ContactUs = () => {
             disableAreaCodes={true}
             // name="phoneNumber"
             label="Phone number"
-            // value={formik.values.phoneNumber}
+            sx={textFieldStyles}
             onChange={formik.handlePhoneNumber}
-            // onBlur={formik.handleBlur}
-            // error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
-            // helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
           />
-          <Button type="submit">Submit</Button>
+
+          <TextField
+            id="standard-multiline-static"
+            sx={textFieldStyles}
+            label="How can we help?"
+            multiline
+            rows={5}
+            placeholder="Tell us a little about the project"
+          />
+
+          <Button type="submit" variant="contained" sx={{ bgcolor: MainBlue, py: 2 }}>
+            Get Started
+          </Button>
         </form>
       </Box>
-      <Box className="contactUsRight">
-        <img src={Header1} style={{ width: '80%' }} />
-      </Box>
+      <Box className="contactUsRight" />
     </ContactUsStyle>
   );
 };
