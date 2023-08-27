@@ -42,7 +42,6 @@ const SendRequest = () => {
               }}
               variant="filled"
               slots={{ root: 'aside' }}
-              slotProps={{ input: { className: 'requestInput' } }}
             />
           </div>
         </div>
@@ -51,10 +50,10 @@ const SendRequest = () => {
           <hr />
         </div>
         <div className="requestImg requestLeftSVG">
-          <img src={leftSVG} alt="leftSVG" classname=" " />
+          <img src={leftSVG} alt="leftSVG" />
         </div>
         <div className="requestImg requestRightSVG">
-          <img src={rightSVG} alt="rightSVG" className="" />
+          <img src={rightSVG} alt="rightSVG" />
         </div>
       </div>
     </RequestStyle>

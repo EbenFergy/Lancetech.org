@@ -1,9 +1,9 @@
-import React from "react";
-import "./SpinnerStyle.css";
+import React from 'react';
+import './SpinnerStyle.css';
 
 const Spinner = () => {
   return (
-    <div class="lds-default">
+    <div className="lds-default">
       <div></div>
       <div></div>
       <div></div>

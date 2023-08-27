@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Typography, TextField, Icon, Button } from '@mui/material';
 import ContactUsStyle from './ContactUsStyle.js';
 import * as Yup from 'yup';
@@ -9,29 +9,37 @@ import { COLORS } from '../../styles/COLORS.ts';
 const validationSchema = Yup.object({
   yourName: Yup.string().required('Please put in your name'),
   email: Yup.string().email('Enter valid email').required('Required'),
-  // phoneNumber: Yup.string().optional(),
+  phoneNumber: Yup.string(),
+  explanation: Yup.string().required('Please tell us about the project'),
 });
 
 const ContactUs = () => {
+  const [phoneNumber, setPhoneNumber] = useState('soda');
+
   const { LightFont, FadedWhite, LightBlue, LightGrey, MainBlue } = COLORS;
 
   const formik = useFormik({
     initialValues: {
       yourName: '',
       email: '',
-      // phoneNumber: '',
+      phoneNumber: '',
+      explanation: '',
     },
 
     validationSchema: validationSchema,
 
-    onSubmit: values => {
-      console.log('values from contact page Form', values);
-    },
-
-    handlePhoneNumber: e => {
-      console.log('phone number', e);
+    onSubmit: (values, input) => {
+      const fields = { ...values, phoneNumber };
+      console.log('values from contact page Form', fields);
+      input.resetForm();
+      setPhoneNumber('');
     },
   });
+
+  const handlePhoneNumber = e => {
+    console.log('phone number', e);
+    setPhoneNumber(e);
+  };
 
   const textFieldStyles = {
     width: '100%',
@@ -107,16 +115,28 @@ const ContactUs = () => {
             variant="outlined"
             defaultCountry={'us'}
             disableAreaCodes={true}
-            // name="phoneNumber"
+            id="phoneNumber"
+            name="phoneNumber"
             label="Phone number"
             sx={textFieldStyles}
-            onChange={formik.handlePhoneNumber}
+            value={phoneNumber}
+            onChange={handlePhoneNumber}
+            onBlur={formik.handleBlur}
+            error={formik.touched.phoneNumber && Boolean(formik.errors.phoneNumber)}
+            helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
           />
 
           <TextField
-            id="standard-multiline-static"
-            sx={textFieldStyles}
+            fullWidth
+            id="explanation"
+            name="explanation"
             label="How can we help?"
+            sx={textFieldStyles}
+            value={formik.values.explanation}
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            error={formik.touched.explanation && Boolean(formik.errors.explanation)}
+            helperText={formik.touched.explanation && formik.errors.explanation}
             multiline
             rows={5}
             placeholder="Tell us a little about the project"
