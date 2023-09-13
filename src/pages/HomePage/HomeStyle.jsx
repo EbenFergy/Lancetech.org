@@ -2,8 +2,14 @@ import styled from 'styled-components';
 import { FONTS } from '../../styles/FONTS.ts';
 import { COLORS } from '../../styles/COLORS.ts';
 
+const { MainBlue } = COLORS;
+
 export const HomeStyle = styled.div`
   overflow: hidden;
+
+  .stickyNav {
+    background-color: ${MainBlue};
+  }
 
   h1 {
     font-size: ${FONTS.large};

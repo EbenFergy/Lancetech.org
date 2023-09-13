@@ -3,7 +3,7 @@ import { COLORS } from '../../styles/COLORS.ts';
 
 const NavStyle = styled.div`
   display: flex;
-  flex-wrap: wrap0;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;

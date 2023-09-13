@@ -8,7 +8,7 @@ const Header = () => {
   const { DarkBlue3 } = COLORS;
 
   return (
-    <HeaderStyle>
+    <HeaderStyle id="homeHeader">
       <img src={TorusImage} alt="torusImage" className="headerImg torusImg" />
       <img src={TorusImage} alt="torusImage" className="headerImg torusImg2" />
       <img src={EllipseImage} alt="EllipseImage" className="headerImg ellipseImg" />
