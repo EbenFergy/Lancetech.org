@@ -1,10 +1,16 @@
-import React, { useRef, useMemo, useEffect, useState } from 'react';
+import React from 'react';
 import NavStyle from './NavStyle';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import lancetechlOGO from '../../assets/lancetech.svg';
 
 const NavBar = ({ navFixed }) => {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate('/roles');
+  };
+
   return (
     <NavStyle navFixed={navFixed}>
       <div>
@@ -21,7 +27,7 @@ const NavBar = ({ navFixed }) => {
           Contact
         </NavLink>
       </div>
-      <Button>Request Demo</Button>
+      <Button onClick={handleNavigate}>See roles</Button>
     </NavStyle>
   );
 };
