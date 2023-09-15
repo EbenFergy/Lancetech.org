@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 import { COLORS } from '../../styles/COLORS.ts';
 
+const { DarkBlue3 } = COLORS;
+
 const NavStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   position: fixed;
+  background-color: ${({ navFixed }) => (navFixed ? '' : DarkBlue3)};
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 20;
 
   a {
     color: ${COLORS.LightFont};

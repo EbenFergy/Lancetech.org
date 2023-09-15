@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useRef, useMemo, useEffect, useState } from 'react';
 import NavStyle from './NavStyle';
 import { NavLink } from 'react-router-dom';
 import Button from '../Button/Button';
 import lancetechlOGO from '../../assets/lancetech.svg';
 
-const NavBar = () => {
+const NavBar = ({ navFixed }) => {
   return (
-    <NavStyle>
+    <NavStyle navFixed={navFixed}>
       <div>
         <img src={lancetechlOGO} alt="lancetechLOGO" />
       </div>
