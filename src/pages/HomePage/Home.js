@@ -8,7 +8,7 @@ import Testimonials from './Testimonials/Testimonials';
 import SendRequest from './SendRequest/SendRequest';
 import Discover from './Discover/Discover';
 import Team from './TheTeam/Team';
-import { Box, Link } from '@mui/material';
+import { Link } from '@mui/material';
 import NavigationRoundedIcon from '@mui/icons-material/NavigationRounded';
 
 const Home = () => {
