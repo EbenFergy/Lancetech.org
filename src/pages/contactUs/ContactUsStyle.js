@@ -9,17 +9,19 @@ const contactUsImgURL = GoogleURLConverter('https://drive.google.com/file/d/1n88
 const ContactUsStyle = styled.div`
   display: flex;
   height: 100vh;
+  overflow: auto;
+  position: relative;
 
   .contactUsLeft {
-    display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem;
+    padding: 4rem 4rem;
     box-sizing: border-box;
     width: 60%;
     background: rgb(2, 0, 36);
     background: linear-gradient(180deg, ${DarkBlue3} 40%, ${DarkBlue4} 100%);
     color: ${FadedWhite};
+    overflow: auto;
   }
 
   .contactUsRight {

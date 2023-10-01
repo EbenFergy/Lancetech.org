@@ -1,4 +1,3 @@
-import React from 'react';
 import { GrowWithStyle } from '../HomeStyle';
 import GrowPNG from '../../../assets/Grow_With.png';
 import growDotPat from '../../../assets/Grow_Dot_Pattern.svg';

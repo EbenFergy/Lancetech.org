@@ -1,14 +1,20 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { RolesStyle } from './rolesStyle';
+
 //@ts-ignore
 import { COLORS } from '../../styles/COLORS.ts';
+import { useDispatch } from 'react-redux';
+import { setPreviousPage } from '../../Redux/slices/coreSlice';
 
 const RolesPage = () => {
   const { LightFont, LightBackground } = COLORS;
+  const dispatch = useDispatch();
+
+  useEffect(() => () => dispatch(setPreviousPage('/roles')));
 
   return (
     <RolesStyle style={{ backgroundColor: LightBackground }}>

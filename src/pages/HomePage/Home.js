@@ -1,4 +1,3 @@
-import React from 'react';
 import { HomeStyle } from './HomeStyle';
 import Header from './Header/Header';
 import JoinFounders from './JoinFounders/JoinFounders';
@@ -10,8 +9,16 @@ import Discover from './Discover/Discover';
 import Team from './TheTeam/Team';
 import { Link } from '@mui/material';
 import NavigationRoundedIcon from '@mui/icons-material/NavigationRounded';
+import { useSelector, useDispatch } from 'react-redux/';
+import { setPreviousPage } from '../../Redux/slices/coreSlice';
+import { useEffect } from 'react';
 
 const Home = () => {
+  const scrollIcon = useSelector(state => state.UIReducer.scrollIcon);
+  const dispatch = useDispatch();
+
+  useEffect(() => () => dispatch(setPreviousPage('/')));
+
   return (
     <HomeStyle>
       <Header />
@@ -19,7 +26,16 @@ const Home = () => {
       <Link
         href="#homeHeader"
         className="stickyNav"
-        sx={{ p: 3, position: 'fixed', zIndex: 10, bottom: '2rem', right: '2rem', cursor: 'pointer', borderRadius: '50%' }}
+        sx={{
+          display: scrollIcon ? 'block' : 'none',
+          p: 3,
+          position: 'fixed',
+          zIndex: 10,
+          bottom: '2rem',
+          right: '2rem',
+          cursor: 'pointer',
+          borderRadius: '50%',
+        }}
       >
         <NavigationRoundedIcon sx={{ fill: '#ffffff' }} />
       </Link>

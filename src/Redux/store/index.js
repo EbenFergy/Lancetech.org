@@ -1,11 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { UIReducer } from "../slices/uiSlice";
+import { configureStore } from '@reduxjs/toolkit';
+import { UIReducer } from '../slices/uiSlice';
+import { CoreReducer } from '../slices/coreSlice';
 
 const store = configureStore({
   reducer: {
     UIReducer: UIReducer,
+    CoreReducer: CoreReducer,
   },
-  middleware: (getDefaultMiddleware) => {
+  middleware: getDefaultMiddleware => {
     return getDefaultMiddleware().concat();
   },
 });

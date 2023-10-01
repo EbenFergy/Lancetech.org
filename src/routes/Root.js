@@ -2,13 +2,13 @@ import { useState, useRef, useEffect, useMemo } from 'react';
 import { Outlet } from 'react-router-dom';
 import NavBar from '../components/Navigation/NavBar';
 import { Box } from '@mui/material';
+import { setScrollIcon } from '../Redux/slices/uiSlice';
+import { useDispatch } from 'react-redux';
 
 const Root = () => {
   const [navFixed, setNavFixed] = useState();
-
   const navBarRef = useRef();
-
-  console.log('hello');
+  const dispatch = useDispatch();
 
   const options = useMemo(() => {
     return { root: null, threshold: 0.89, rootMargin: '0px' };
@@ -17,16 +17,15 @@ const Root = () => {
   useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       if (entries[0].isIntersecting) {
-        console.log('I am intersecting', entries[0].isIntersecting);
         setNavFixed(true);
+        dispatch(setScrollIcon(false));
       } else {
-        console.log('...not intersecting', entries[0].isIntersecting);
         setNavFixed(false);
+        dispatch(setScrollIcon(true));
       }
     }, options);
-
     if (navBarRef.current) observer.observe(navBarRef.current);
-  }, [navBarRef, options]);
+  }, [navBarRef, options, dispatch]);
 
   return (
     <div style={{}}>

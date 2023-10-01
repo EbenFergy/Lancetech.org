@@ -3,6 +3,7 @@ import NavStyle from './NavStyle';
 import { NavLink, useNavigate } from 'react-router-dom';
 import Button from '../Button/Button';
 import lancetechlOGO from '../../assets/lancetech.svg';
+import { Box } from '@mui/material';
 
 const NavBar = ({ navFixed }) => {
   const navigate = useNavigate();
@@ -13,9 +14,9 @@ const NavBar = ({ navFixed }) => {
 
   return (
     <NavStyle navFixed={navFixed}>
-      <div>
+      <Box sx={{ cursor: 'pointer' }} onClick={() => navigate('')}>
         <img src={lancetechlOGO} alt="lancetechLOGO" />
-      </div>
+      </Box>
       <div className="navLinks">
         <NavLink to="" className={({ isActive }) => (isActive ? 'active' : undefined)}>
           Home

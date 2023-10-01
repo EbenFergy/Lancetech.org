@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Typography, TextField, Icon, Button } from '@mui/material';
+import { Box, Typography, Icon, TextField, Button, IconButton } from '@mui/material';
 import ContactUsStyle from './ContactUsStyle.js';
 import * as Yup from 'yup';
 import { useFormik } from 'formik';
 import MuiPhoneNumber from 'material-ui-phone-number';
 import { COLORS } from '../../styles/COLORS.ts';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const validationSchema = Yup.object({
   yourName: Yup.string().required('Please put in your name'),
@@ -15,6 +18,8 @@ const validationSchema = Yup.object({
 
 const ContactUs = () => {
   const [phoneNumber, setPhoneNumber] = useState('soda');
+  const navigate = useNavigate();
+  const previousPage = useSelector(state => state.CoreReducer.previousPage);
 
   const { LightFont, FadedWhite, LightBlue, LightGrey, MainBlue } = COLORS;
 
@@ -72,9 +77,17 @@ const ContactUs = () => {
     },
   };
 
+  const handleBack = () => {
+    navigate(previousPage);
+  };
+
   return (
     <ContactUsStyle>
       <Box className="contactUsLeft" sx={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <IconButton onClick={handleBack} sx={{ position: 'absolute', top: 15, left: 10 }}>
+          <ArrowBackIosIcon sx={{ color: FadedWhite }} />
+          <Typography sx={{ color: FadedWhite }}>Back</Typography>
+        </IconButton>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, width: '100%', maxWidth: '50rem' }}>
           <Icon sx={{ height: 'fit-content', fontSize: '4rem' }}>connect_without_contact</Icon>
           <Typography variant="h3" sx={{ fontFamily: 'inherit' }}>
@@ -83,7 +96,14 @@ const ContactUs = () => {
         </Box>
         <form
           onSubmit={formik.handleSubmit}
-          style={{ width: '100%', display: 'flex', flexDirection: 'column', gap: '2rem', maxWidth: '50rem' }}
+          style={{
+            width: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '2rem',
+            maxWidth: '50rem',
+            height: '60%',
+          }}
         >
           <TextField
             fullWidth

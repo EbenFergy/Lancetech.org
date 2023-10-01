@@ -1,13 +1,18 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { AboutStyle } from './AboutStyle';
 import Button from '../../components/Button/Button';
 import TorusImage from '../../assets/Torus.svg';
 import OurCulture from './ourCulture/OurCulture';
 import { useNavigate } from 'react-router-dom';
 import OurTeams from './ourTeams/OurTeams';
+import { useDispatch } from 'react-redux';
+import { setPreviousPage } from '../../Redux/slices/coreSlice';
 
 const About = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  useEffect(() => () => dispatch(setPreviousPage('/about')));
 
   const handleNavigate = () => {
     navigate('/roles');

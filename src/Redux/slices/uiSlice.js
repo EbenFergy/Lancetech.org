@@ -1,14 +1,20 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
+const initialState = {
+  scrollIcon: false,
+};
 
 const UI = createSlice({
-  name: "UI_SLICE",
+  name: 'UI_SLICE',
   initialState,
   reducers: {
     notification(state, action) {},
+
+    setScrollIcon: (state, action) => {
+      state.scrollIcon = action.payload;
+    },
   },
 });
 
-export const UIActions = UI.actions;
+export const { setScrollIcon } = UI.actions;
 export const UIReducer = UI.reducer;
