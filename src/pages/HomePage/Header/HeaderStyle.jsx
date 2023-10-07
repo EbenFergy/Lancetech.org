@@ -60,6 +60,10 @@ export const HeaderStyle = styled.div`
     justify-content: space-between;
     border-radius: 10px;
 
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+
     .loader {
       align-self: end;
       animation: ${rotate} 5s ease-in-out infinite;

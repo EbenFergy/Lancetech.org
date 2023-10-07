@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { COLORS } from '../../../styles/COLORS.ts';
+import { GoogleURLConverter } from '../../../core/helpers/GoogleURLConverter.ts';
+
+const cultureImgURL = GoogleURLConverter('https://drive.google.com/file/d/1VYaBtUK7j1r_pcB49cchzgTx0lGt0XVG/view?usp=sharing');
 
 export const OurCultureStyle = styled.div`
   background-color: ${COLORS.DarkBlue3};
@@ -12,6 +15,7 @@ export const OurCultureStyle = styled.div`
 
   .cultureMid {
     display: flex;
+    gap: 2rem;
     justify-content: space-between;
     box-sizing: border-box;
 
@@ -35,7 +39,13 @@ export const OurCultureStyle = styled.div`
     }
 
     .ourCultureImg {
-      height: 30rem;
+      /* height: 30rem; */
+      width: 50%;
+      background-size: cover;
+      background: url(${cultureImgURL});
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       border: 2px solid;
     }
   }

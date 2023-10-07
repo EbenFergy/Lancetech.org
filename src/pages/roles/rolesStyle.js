@@ -26,7 +26,6 @@ export const RolesStyle = styled.div`
   }
 
   #headerTitle {
-    /* text-align: center; */
     font-size: 2.2rem;
     font-weight: 800;
     margin-bottom: 0;
@@ -46,7 +45,6 @@ export const RolesStyle = styled.div`
     height: 8.2rem;
     padding: 0 0 1rem 0;
     text-align: justify;
-    /* background-color: lightgreen; */
 
     display: -webkit-box;
     -webkit-box-orient: vertical;

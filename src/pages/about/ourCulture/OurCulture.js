@@ -50,7 +50,7 @@ const OurCulture = ({ toRoles }) => {
             </div>
             <Button onClick={toRoles}>See Open Roles</Button>
           </div>
-          <img src={cultureImgURL} alt="ourCulture" className="ourCultureImg" />
+          <div className="ourCultureImg">{/* <img src={cultureImgURL} alt="ourCulture" /> */}</div>
         </div>
       </Box>
     </OurCultureStyle>

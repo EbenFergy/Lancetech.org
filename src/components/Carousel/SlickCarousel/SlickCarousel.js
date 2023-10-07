@@ -49,6 +49,24 @@ const SlickCarousel = () => {
         },
       },
       {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2.2,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2.1,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 2.2,

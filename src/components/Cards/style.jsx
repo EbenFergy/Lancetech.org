@@ -15,6 +15,11 @@ export const Style = styled.div`
   padding: 0 2rem;
   border: 1px solid ${COLORS.LightGrey};
 
+  @media only screen and (max-width: 1350px) {
+    width: 18rem;
+    height: 14rem;
+  }
+
   .cardHeader {
     margin-bottom: 1rem;
   }
