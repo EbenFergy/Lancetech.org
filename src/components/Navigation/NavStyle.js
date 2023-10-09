@@ -5,7 +5,6 @@ const { DarkBlue3 } = COLORS;
 
 const NavStyle = styled.div`
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 4rem;
@@ -14,6 +13,24 @@ const NavStyle = styled.div`
   left: 0;
   right: 0;
   z-index: 20;
+
+  .webNavLogo {
+    display: none;
+    @media only screen and (max-width: 1200px) {
+      display: block;
+    }
+  }
+
+  .webNavButtons {
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
 
   a {
     color: ${COLORS.LightFont};
@@ -33,6 +50,16 @@ const NavStyle = styled.div`
   a:hover {
     text-decoration: underline;
     color: ${COLORS.MainBlue};
+  }
+
+  .menuIcon {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .menuIcon {
+      display: block;
+    }
   }
 `;
 

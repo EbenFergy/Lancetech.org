@@ -4,6 +4,7 @@ import NavBar from '../components/Navigation/NavBar';
 import { Box } from '@mui/material';
 import { setScrollIcon } from '../Redux/slices/uiSlice';
 import { useDispatch } from 'react-redux';
+import MobileMenu from '../components/MobileMenu';
 
 const Root = () => {
   const [navFixed, setNavFixed] = useState();
@@ -30,6 +31,7 @@ const Root = () => {
   return (
     <div style={{}}>
       <NavBar navFixed={navFixed} />
+      <MobileMenu />
       <Box ref={navBarRef} sx={{ height: '80vh' }}>
         <Outlet />
       </Box>

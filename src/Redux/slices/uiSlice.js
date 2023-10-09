@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   scrollIcon: false,
+  openMenu: false,
 };
 
 const UI = createSlice({
@@ -13,8 +14,11 @@ const UI = createSlice({
     setScrollIcon: (state, action) => {
       state.scrollIcon = action.payload;
     },
+    setOpenMenu: (state, action) => {
+      state.openMenu = action.payload;
+    },
   },
 });
 
-export const { setScrollIcon } = UI.actions;
+export const { setScrollIcon, setOpenMenu } = UI.actions;
 export const UIReducer = UI.reducer;

@@ -1,34 +1,32 @@
-import React from 'react';
 import NavStyle from './NavStyle';
-import { NavLink, useNavigate } from 'react-router-dom';
-import Button from '../Button/Button';
-import lancetechlOGO from '../../assets/lancetech.svg';
-import { Box } from '@mui/material';
+import Logo from '../Logo';
+import { Box, Icon, IconButton } from '@mui/material';
+import NavButtonComponent from '../NavButtonComponent';
+import { useDispatch } from 'react-redux';
+import { setOpenMenu } from '../../Redux/slices/uiSlice';
+import { COLORS } from '../../styles/COLORS.ts';
 
 const NavBar = ({ navFixed }) => {
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
 
-  const handleNavigate = () => {
-    navigate('/roles');
+  const { MainBlue } = COLORS;
+
+  const handleOpenSideMenu = () => {
+    dispatch(setOpenMenu(true));
   };
 
   return (
     <NavStyle navFixed={navFixed}>
-      <Box sx={{ cursor: 'pointer' }} onClick={() => navigate('')}>
-        <img src={lancetechlOGO} alt="lancetechLOGO" />
+      <Box className="webNavLogo">
+        <Logo />
       </Box>
-      <div className="navLinks">
-        <NavLink to="" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-          Home
-        </NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-          About
-        </NavLink>
-        <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : undefined)}>
-          Contact
-        </NavLink>
-      </div>
-      <Button onClick={handleNavigate}>See roles</Button>
+      <Box sx={{ width: '100%' }} className="webNavButtons">
+        <NavButtonComponent navFixed={navFixed} />
+      </Box>
+
+      <IconButton className="menuIcon" onClick={handleOpenSideMenu}>
+        <Icon sx={{ fontSize: '2.5rem', color: MainBlue }}>menu_icon</Icon>
+      </IconButton>
     </NavStyle>
   );
 };
