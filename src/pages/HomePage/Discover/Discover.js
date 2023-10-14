@@ -24,7 +24,6 @@ const Discover = () => {
           <img src={DiscSVG2} alt="DiscSVG2" className="discSVG" />
           <h4>
             Product Development <br />
-            process
           </h4>
           <div className="pCont">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim magni quo ab non? Error qui, iste consequuntur quasi</p>
@@ -35,9 +34,7 @@ const Discover = () => {
         </div>
         <div className="discChildren" id="discChild3">
           <img src={DiscSVG3} alt="DiscSVG3" className="discSVG" />
-          <h4>
-            Testing, prototyping and <br /> support
-          </h4>
+          <h4>Test, Prototype, Support</h4>
           <div className="pCont">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim magni quo ab non? Error qui, iste consequuntur quasi</p>
           </div>

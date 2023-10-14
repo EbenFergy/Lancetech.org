@@ -18,11 +18,20 @@ export const HeaderStyle = styled.div`
   h2 {
     color: #def4ff;
     font-size: 80px;
-    /* border: 2px solid; */
     text-align: center;
 
     span {
       color: ${COLORS.LightBlue};
+    }
+
+    @media only screen and (max-width: 900px) {
+      font-size: 70px;
+    }
+  }
+
+  .headerTitle {
+    @media only screen and (max-width: 900px) {
+      padding: 0 1rem;
     }
   }
 

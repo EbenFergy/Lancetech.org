@@ -28,6 +28,7 @@ export const OurCultureStyle = styled.div`
 
       .cultureMidLeftSub {
         display: flex;
+        gap: 1rem;
       }
 
       .cultures {

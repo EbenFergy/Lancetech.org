@@ -22,6 +22,10 @@ const ContactUsStyle = styled.div`
     background: linear-gradient(180deg, ${DarkBlue3} 40%, ${DarkBlue4} 100%);
     color: ${FadedWhite};
     overflow: auto;
+
+    @media only screen and (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   .contactUsRight {
@@ -33,6 +37,10 @@ const ContactUsStyle = styled.div`
     background-image: url(${contactUsImgURL});
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 `;
 

@@ -3,6 +3,7 @@ import { HeaderStyle } from './HeaderStyle';
 import TorusImage from '../../../assets/Torus.svg';
 import EllipseImage from '../../../assets/Ellipse.svg';
 import { COLORS } from '../../../styles/COLORS.ts';
+import { Box } from '@mui/material';
 
 const Header = () => {
   const { DarkBlue3 } = COLORS;
@@ -30,10 +31,12 @@ const Header = () => {
           <div className="mobileIconCont"></div>
         </div>
       </div>
-      <h2>
-        Product design, <br />
-        <span> Mobile and Web apps </span>
-      </h2>
+      <Box className="headerTitle">
+        <h2>
+          Product design, <br />
+          <span> Mobile and Web apps </span>
+        </h2>
+      </Box>
       <div className="waveSVG">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
           <path

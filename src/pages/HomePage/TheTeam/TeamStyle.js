@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const TeamStyle = styled.div`
+const TeamStyle = styled.div`
   background-color: #f4f4f4;
 
   .teamWrapper {
@@ -16,13 +16,15 @@ export const TeamStyle = styled.div`
     margin: 3rem 0;
 
     .teamMember {
-      /* width: 12rem; */
-      /* display: flex;
-      justify-content: center; */
       align-items: center;
       height: 15rem;
       border-radius: 5px;
       overflow: hidden;
+
+      @media only screen and (max-width: 740px) {
+        display: flex;
+        justify-content: center;
+      }
     }
 
     .memberName {
@@ -37,12 +39,7 @@ export const TeamStyle = styled.div`
     .nameAndTitle {
       margin: 1rem 0;
     }
-
-    @media only screen and (max-width: 740px) {
-      .teamMember {
-        display: flex;
-        justify-content: center;
-      }
-    }
   }
 `;
+
+export default TeamStyle;

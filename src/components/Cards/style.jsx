@@ -19,6 +19,14 @@ export const Style = styled.div`
     width: 18rem;
     height: 14rem;
   }
+  @media only screen and (max-width: 1050px) {
+    width: 15rem;
+    height: 14rem;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 60vw;
+    height: 14rem;
+  }
 
   .cardHeader {
     margin-bottom: 1rem;

@@ -30,7 +30,6 @@ export const DiscoverStyle = styled.div`
   flex-direction: column;
   gap: 4rem;
   padding: 4rem;
-  /* border: 2px solid; */
 
   h1 {
     text-align: center;
@@ -40,6 +39,10 @@ export const DiscoverStyle = styled.div`
     display: flex;
     justify-content: center;
     gap: 6rem;
+
+    @media only screen and (max-width: 1024px) {
+      gap: 1rem;
+    }
 
     .discChildren {
       display: flex;
@@ -76,13 +79,20 @@ export const DiscoverStyle = styled.div`
         img {
           width: 14rem;
           height: 4.5rem;
+        }
 
-          /* width: clamp(7rem, 80%, 13rem); */
+        @media only screen and (max-width: 1024px) {
+          display: none;
         }
       }
 
-      img {
-        /* border: 2px solid; */
+      @media only screen and (max-width: 900px) {
+        align-items: center;
+        text-align: center;
+      }
+      @media only screen and (max-width: 760px) {
+        align-items: center;
+        text-align: center;
       }
     }
 
@@ -91,10 +101,21 @@ export const DiscoverStyle = styled.div`
       #ArrowSVG2 {
         transform: scaleY(-1) rotate(-30deg);
       }
+
+      @media only screen and (max-width: 900px) {
+        margin: 0;
+      }
     }
 
     #discChild3 {
       margin-top: 10rem;
+      @media only screen and (max-width: 900px) {
+        margin: 0;
+      }
+    }
+
+    @media only screen and (max-width: 760px) {
+      flex-direction: column;
     }
   }
 `;
@@ -107,6 +128,12 @@ export const JoinFoundersStyle = styled.div`
 
   h1 {
     text-align: center;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .JoinFoundersImage {
+      width: 90%;
+    }
   }
 `;
 
@@ -143,6 +170,20 @@ export const GrowWithStyle = styled.div`
       top: -3rem;
       left: -5rem;
     }
+
+    @media only screen and (max-width: 1024px) {
+      .GrowPNG {
+        width: 100%;
+      }
+
+      .growDotPat {
+        width: 30%;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
   }
 `;
 
@@ -157,23 +198,38 @@ export const MeetWithStyle = styled.div`
     padding: 3rem 5rem;
     max-width: 1920px;
     margin: auto;
+
+    @media only screen and (max-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .meetLeft {
-    /* border: 2px solid red; */
-
     .meetImgCont {
       position: relative;
 
       .MeetPNG {
         position: relative;
         z-index: 2;
+
+        @media only screen and (max-width: 1024px) {
+          width: 80%;
+        }
       }
       .meetDotPat {
         position: absolute;
         bottom: -2rem;
         left: -3rem;
         z-index: 1;
+
+        @media only screen and (max-width: 1024px) {
+          width: 30%;
+        }
+      }
+
+      @media only screen and (max-width: 900px) {
+        display: none;
       }
     }
   }
@@ -209,6 +265,13 @@ export const TestimonialsStyle = styled.div`
   padding: 5rem 10rem;
   max-width: 1920px;
   margin: auto;
+
+  @media only screen and (max-width: 1000px) {
+    padding: 5rem 4rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 5rem 3rem;
+  }
 `;
 
 export const RequestStyle = styled.div`
@@ -232,6 +295,10 @@ export const RequestStyle = styled.div`
   .requestLeftSVG {
     top: 5rem;
     left: 0;
+
+    @media only screen and (max-width: 960px) {
+      display: none;
+    }
   }
 
   .requestRightSVG {

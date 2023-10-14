@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamStyle } from './TeamStyle';
+import TeamStyle from './TeamStyle';
 import { TeamList } from './__fixtures__/Team.fixtures.ts';
 
 const Team = () => {

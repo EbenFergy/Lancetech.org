@@ -56,7 +56,6 @@ const ContactUs = () => {
       color: LightFont,
     },
     '& input': {
-      // border: '2px solid green',
       color: FadedWhite,
     },
     '& .MuiInputBase-input': {
