@@ -128,12 +128,20 @@ export const JoinFoundersStyle = styled.div`
 
   h1 {
     text-align: center;
+
+    @media only screen and (max-width: 500px) {
+      text-align: left;
+    }
   }
 
   @media only screen and (max-width: 1024px) {
     .JoinFoundersImage {
       width: 90%;
     }
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 0 2rem;
   }
 `;
 
@@ -148,6 +156,10 @@ export const GrowWithStyle = styled.div`
     padding: 7rem 5rem 3rem 5rem;
     max-width: 1920px;
     margin: auto;
+
+    @media only screen and (max-width: 500px) {
+      padding: 7rem 2rem 3rem 2rem;
+    }
   }
 
   .growWithChild {
@@ -202,6 +214,10 @@ export const MeetWithStyle = styled.div`
     @media only screen and (max-width: 900px) {
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    @media only screen and (max-width: 500px) {
+      padding: 3rem 2rem;
     }
   }
 
@@ -271,6 +287,10 @@ export const TestimonialsStyle = styled.div`
   }
   @media only screen and (max-width: 600px) {
     padding: 5rem 3rem;
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 5rem 2rem;
   }
 `;
 

@@ -4,7 +4,7 @@ import JoinFounders from './JoinFounders/JoinFounders';
 import GrowWith from './GrowWith/GrowWith';
 import MeetWith from './Meet with/MeetWith';
 import Testimonials from './Testimonials/Testimonials';
-import SendRequest from './SendRequest/SendRequest';
+// import SendRequest from './SendRequest/SendRequest';
 import Discover from './Discover/Discover';
 import Team from './TheTeam/Team';
 import { Link } from '@mui/material';
@@ -44,7 +44,7 @@ const Home = () => {
       <MeetWith />
       <Testimonials />
       <Team />
-      <SendRequest />
+      {/* <SendRequest /> */}
     </HomeStyle>
   );
 };

@@ -19,10 +19,10 @@ const RolesPage = () => {
   return (
     <RolesStyle style={{ backgroundColor: LightBackground }}>
       <Box className="rolesHeader">
-        <Typography variant="h5" sx={{ fontFamily: 'inherit' }}>
+        <Typography variant="h5" sx={{ fontFamily: 'inherit', textAlign: 'center' }}>
           Your Dream Career Starts here
         </Typography>
-        <Typography variant="h1" sx={{ fontFamily: 'inherit' }}>
+        <Typography variant="h1" sx={{ fontFamily: 'inherit', textAlign: 'center' }}>
           Job Opportunities
         </Typography>
       </Box>

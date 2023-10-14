@@ -7,6 +7,10 @@ const TeamStyle = styled.div`
     padding: 8rem 15rem;
     max-width: 1440px;
     margin: auto;
+
+    @media only screen and (max-width: 500px) {
+      padding: 8rem 2rem;
+    }
   }
 
   .teamGallery {

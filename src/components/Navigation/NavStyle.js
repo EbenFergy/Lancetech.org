@@ -14,6 +14,10 @@ const NavStyle = styled.div`
   right: 0;
   z-index: 20;
 
+  @media only screen and (max-width: 700px) {
+    padding: 1rem;
+  }
+
   .webNavLogo {
     display: none;
     @media only screen and (max-width: 1200px) {

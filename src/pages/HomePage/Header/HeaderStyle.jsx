@@ -43,6 +43,10 @@ export const HeaderStyle = styled.div`
   .torusImg {
     left: 10rem;
     animation: ${movingShape} 8s ease-in-out infinite;
+
+    @media only screen and (max-width: 700px) {
+      display: none;
+    }
   }
 
   .torusImg2 {

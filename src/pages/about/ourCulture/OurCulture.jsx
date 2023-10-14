@@ -4,12 +4,8 @@ import Button from '../../../components/Button/Button';
 import BackupTableSharpIcon from '@mui/icons-material/BackupTableSharp';
 import { Icon, Box } from '@mui/material';
 import { COLORS } from '../../../styles/COLORS.ts';
-import { GoogleURLConverter } from '../../../core/helpers/GoogleURLConverter.ts';
 
 const OurCulture = ({ toRoles }) => {
-  const cultureImgURL = GoogleURLConverter('https://drive.google.com/file/d/1VYaBtUK7j1r_pcB49cchzgTx0lGt0XVG/view?usp=sharing');
-  console.log('cultureImgURL', cultureImgURL);
-
   return (
     <OurCultureStyle>
       <Box sx={{ m: 'auto' }}>
@@ -50,7 +46,7 @@ const OurCulture = ({ toRoles }) => {
             </div>
             <Button onClick={toRoles}>See Open Roles</Button>
           </div>
-          <div className="ourCultureImg">{/* <img src={cultureImgURL} alt="ourCulture" /> */}</div>
+          <div className="ourCultureImg" />
         </div>
       </Box>
     </OurCultureStyle>

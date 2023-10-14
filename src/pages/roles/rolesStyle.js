@@ -4,6 +4,25 @@ import { GoogleURLConverter } from '../../core/helpers/GoogleURLConverter.ts';
 const bgImg = GoogleURLConverter('https://drive.google.com/file/d/17DY88QbmOzM2volO0bTxlJMOvxbG2z_a/view?usp=sharing');
 
 export const RolesStyle = styled.div`
+  h1,
+  h5 {
+    /* max-width: 100%; */
+  }
+  @media only screen and (max-width: 800px) {
+    h1 {
+      font-size: 80px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: 50px;
+    }
+
+    h5 {
+      font-size: 1rem;
+    }
+  }
+
   .rolesHeader {
     height: 40rem;
     background-size: cover;

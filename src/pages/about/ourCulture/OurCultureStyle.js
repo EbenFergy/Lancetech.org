@@ -19,12 +19,20 @@ export const OurCultureStyle = styled.div`
     justify-content: space-between;
     box-sizing: border-box;
 
+    @media only screen and (max-width: 700px) {
+      flex-direction: column;
+    }
+
     .cultureMidLeft {
       max-width: 50%;
       display: flex;
       flex-direction: column;
       gap: 2rem;
       justify-content: space-between;
+
+      @media only screen and (max-width: 700px) {
+        max-width: 100%;
+      }
 
       .cultureMidLeftSub {
         display: flex;
@@ -40,7 +48,6 @@ export const OurCultureStyle = styled.div`
     }
 
     .ourCultureImg {
-      /* height: 30rem; */
       width: 50%;
       background-size: cover;
       background: url(${cultureImgURL});
@@ -48,6 +55,10 @@ export const OurCultureStyle = styled.div`
       background-size: cover;
       background-position: center;
       border: 2px solid;
+
+      @media only screen and (max-width: 700px) {
+        display: none;
+      }
     }
   }
 `;
