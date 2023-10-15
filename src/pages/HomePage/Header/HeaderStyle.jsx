@@ -26,7 +26,6 @@ export const HeaderStyle = styled.div`
 
     @media only screen and (max-width: 900px) {
       font-size: 70px;
-      text-align: left;
     }
   }
 
@@ -80,6 +79,19 @@ export const HeaderStyle = styled.div`
       bottom: 6rem;
       left: 10%;
 
+      width: 2rem;
+      height: 10em;
+    }
+  }
+
+  .ellipseImg3 {
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+      display: block;
+      animation: ${bouncingShape} 15s ease-in-out infinite;
+      bottom: 6rem;
+      right: 10%;
       width: 2rem;
       height: 10em;
     }

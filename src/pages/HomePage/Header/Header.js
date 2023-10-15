@@ -14,6 +14,7 @@ const Header = () => {
       <img src={TorusImage} alt="torusImage" className="headerImg torusImg2" />
       <img src={EllipseImage} alt="EllipseImage" className="headerImg ellipseImg" />
       <img src={EllipseImage} alt="EllipseImage" className="headerImg ellipseImg2" />
+      <img src={EllipseImage} alt="EllipseImage" className="headerImg ellipseImg3" />
       <div className="mobileWebAnime ">
         <svg className="loader" width="45" height="45" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

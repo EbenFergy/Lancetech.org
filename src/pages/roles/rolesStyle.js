@@ -4,20 +4,12 @@ import { GoogleURLConverter } from '../../core/helpers/GoogleURLConverter.ts';
 const bgImg = GoogleURLConverter('https://drive.google.com/file/d/17DY88QbmOzM2volO0bTxlJMOvxbG2z_a/view?usp=sharing');
 
 export const RolesStyle = styled.div`
-  h1,
-  h5 {
-    /* max-width: 100%; */
-  }
   @media only screen and (max-width: 800px) {
     h1 {
       font-size: 80px;
     }
   }
   @media only screen and (max-width: 600px) {
-    h1 {
-      font-size: 50px;
-    }
-
     h5 {
       font-size: 1rem;
     }
@@ -39,15 +31,17 @@ export const RolesStyle = styled.div`
     padding: 0 1rem;
     transition: all 0.8s;
 
+    #rolesTitle {
+      font-size: 70px;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 45px;
+      }
+    }
+
     .btnCont {
       margin-bottom: 5rem;
     }
-  }
-
-  #headerTitle {
-    font-size: 2.2rem;
-    font-weight: 800;
-    margin-bottom: 0;
   }
 
   .roleCards {

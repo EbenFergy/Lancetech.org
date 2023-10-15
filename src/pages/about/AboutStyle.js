@@ -38,6 +38,10 @@ export const AboutStyle = styled.div`
 
     @media only screen and (max-width: 650px) {
       padding: 6rem 2rem;
+
+      br {
+        display: none;
+      }
     }
   }
 

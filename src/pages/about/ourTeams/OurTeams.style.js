@@ -16,6 +16,15 @@ export const OurTeamsStyle = styled.div`
     display: flex;
     align-items: center;
     gap: 2rem;
+    justify-content: space-between;
+
+    h3 {
+      color: ${COLORS.LightHeader};
+      font-size: 20px;
+    }
+    p {
+      color: ${COLORS.LightFont};
+    }
 
     @media only screen and (max-width: 600px) {
       flex-direction: column;
