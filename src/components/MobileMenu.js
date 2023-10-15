@@ -28,8 +28,12 @@ const MobileMenu = () => {
   return (
     <Box>
       <Dialog fullScreen open={openMenuModal} onClose={handleClose} TransitionComponent={Transition}>
-        <IconButton sx={{ position: 'absolute', right: '2rem', top: '2rem' }} onClick={handleClose} aria-label="close">
-          <Icon>close</Icon>
+        <IconButton
+          sx={{ position: 'absolute', right: '2rem', top: '2rem', width: '6rem', height: '6rem' }}
+          onClick={handleClose}
+          aria-label="close"
+        >
+          <Icon sx={{ fontSize: '2rem' }}>close</Icon>
         </IconButton>
         <DialogContent
           sx={{

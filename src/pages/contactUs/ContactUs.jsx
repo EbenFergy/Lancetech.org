@@ -88,7 +88,7 @@ const ContactUs = () => {
           <Typography sx={{ color: FadedWhite }}>Back</Typography>
         </IconButton>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, width: '100%', maxWidth: '50rem' }}>
-          <Icon sx={{ height: 'fit-content', fontSize: '4rem' }}>connect_without_contact</Icon>
+          <Icon className="connectImage">connect_without_contact</Icon>
           <Typography variant="h1" sx={{ fontFamily: 'inherit' }}>
             Let's level up your <br /> brand, together
           </Typography>

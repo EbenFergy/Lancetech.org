@@ -9,7 +9,6 @@ const contactUsImgURL = GoogleURLConverter('https://drive.google.com/file/d/1n88
 const ContactUsStyle = styled.div`
   display: flex;
   height: 100vh;
-  overflow: auto;
   position: relative;
 
   .contactUsLeft {
@@ -25,6 +24,18 @@ const ContactUsStyle = styled.div`
 
     @media only screen and (max-width: 1024px) {
       width: 100%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      padding: 4rem 2rem;
+    }
+
+    .connectImage {
+      font-size: 3rem;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 3rem;
+      }
     }
   }
 
