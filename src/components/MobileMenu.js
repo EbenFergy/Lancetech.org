@@ -28,11 +28,7 @@ const MobileMenu = () => {
   return (
     <Box>
       <Dialog fullScreen open={openMenuModal} onClose={handleClose} TransitionComponent={Transition}>
-        <IconButton
-          sx={{ position: 'absolute', right: '2rem', top: '2rem', width: '6rem', height: '6rem' }}
-          onClick={handleClose}
-          aria-label="close"
-        >
+        <IconButton sx={{ position: 'absolute', right: '2rem', top: '2rem', zIndex: 10 }} onClick={handleClose} aria-label="close">
           <Icon sx={{ fontSize: '2rem' }}>close</Icon>
         </IconButton>
         <DialogContent
@@ -43,6 +39,7 @@ const MobileMenu = () => {
             justifyContent: 'center',
             gap: '4rem',
             fontSize: '2rem',
+            zIndex: 5,
 
             a: {
               textDecoration: 'none',
