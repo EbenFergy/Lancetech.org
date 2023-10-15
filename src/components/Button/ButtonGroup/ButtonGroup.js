@@ -7,7 +7,7 @@ import { COLORS } from '../../../styles/COLORS.ts';
 
 export const LeftBtn = ({ onClick }) => {
   return (
-    <BtnGroupStyle style={{ right: '4.5rem' }}>
+    <BtnGroupStyle style={{ marginRight: '4.5rem' }}>
       <IconButton onClick={onClick} sx={{ backgroundColor: COLORS.PaleBlue, border: '1px solid rgba(34, 176, 252, 0.25)' }}>
         <ChevronLeftRoundedIcon sx={{ fontSize: 40, color: '#448CB3' }} />
       </IconButton>
@@ -17,7 +17,7 @@ export const LeftBtn = ({ onClick }) => {
 
 export const RightBtn = ({ onClick }) => {
   return (
-    <BtnGroupStyle style={{ right: 0 }}>
+    <BtnGroupStyle>
       <IconButton onClick={onClick} style={{ backgroundColor: '#448CB3' }}>
         <ChevronRightRoundedIcon sx={{ fontSize: 40, color: '#ffffff' }} />
       </IconButton>

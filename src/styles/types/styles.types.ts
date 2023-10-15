@@ -22,6 +22,7 @@ export interface ColorsType {
  */
 export interface FontsType {
   large: string;
+  midLarge: string;
   medium: string;
   midSmall: string;
   small: string;

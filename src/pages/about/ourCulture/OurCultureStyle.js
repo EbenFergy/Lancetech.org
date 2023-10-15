@@ -9,6 +9,14 @@ export const OurCultureStyle = styled.div`
   color: ${COLORS.White};
   padding: 6rem 6rem;
 
+  @media only screen and (max-width: 650px) {
+    padding: 6rem 2rem;
+  }
+
+  @media only screen and (max-width: 400px) {
+    text-align: center;
+  }
+
   > div {
     max-width: 1440px;
   }
@@ -37,6 +45,12 @@ export const OurCultureStyle = styled.div`
       .cultureMidLeftSub {
         display: flex;
         gap: 1rem;
+
+        @media only screen and (max-width: 400px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
       }
 
       .cultures {
@@ -44,6 +58,10 @@ export const OurCultureStyle = styled.div`
         flex-direction: column;
         gap: 0.5rem;
         max-width: 15rem;
+
+        @media only screen and (max-width: 400px) {
+          align-items: center;
+        }
       }
     }
 

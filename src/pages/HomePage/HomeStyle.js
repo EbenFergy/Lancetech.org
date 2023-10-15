@@ -11,13 +11,6 @@ export const HomeStyle = styled.div`
     background-color: ${MainBlue};
   }
 
-  h1 {
-    font-size: ${FONTS.large};
-    font-weight: 700;
-    line-height: 64px;
-    color: ${COLORS.LightHeader};
-  }
-
   h4 {
     font-size: ${FONTS.small};
     margin: 0;
@@ -49,6 +42,15 @@ export const DiscoverStyle = styled.div`
       flex-direction: column;
       gap: 1rem;
       position: relative;
+
+      @media only screen and (max-width: 900px) {
+        align-items: center;
+        text-align: center;
+      }
+      @media only screen and (max-width: 760px) {
+        align-items: center;
+        text-align: center;
+      }
 
       :hover {
         .h4 {
@@ -85,15 +87,6 @@ export const DiscoverStyle = styled.div`
           display: none;
         }
       }
-
-      @media only screen and (max-width: 900px) {
-        align-items: center;
-        text-align: center;
-      }
-      @media only screen and (max-width: 760px) {
-        align-items: center;
-        text-align: center;
-      }
     }
 
     #discChild2 {
@@ -126,14 +119,6 @@ export const JoinFoundersStyle = styled.div`
   align-items: center;
   justify-content: center;
 
-  h1 {
-    text-align: center;
-
-    @media only screen and (max-width: 500px) {
-      text-align: left;
-    }
-  }
-
   @media only screen and (max-width: 1024px) {
     .JoinFoundersImage {
       width: 90%;
@@ -142,6 +127,14 @@ export const JoinFoundersStyle = styled.div`
 
   @media only screen and (max-width: 500px) {
     padding: 0 2rem;
+
+    .JoinFoundersImage {
+      width: 100%;
+    }
+  }
+
+  h1 {
+    text-align: center;
   }
 `;
 
@@ -281,6 +274,7 @@ export const TestimonialsStyle = styled.div`
   padding: 5rem 10rem;
   max-width: 1920px;
   margin: auto;
+  position: relative;
 
   @media only screen and (max-width: 1000px) {
     padding: 5rem 4rem;

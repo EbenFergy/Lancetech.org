@@ -3,4 +3,29 @@ import { COLORS } from '../../../styles/COLORS.ts';
 
 export const OurTeamsStyle = styled.div`
   background-color: ${COLORS.LightBackground};
+
+  .teamsWrapper {
+    padding: 5rem;
+
+    @media only screen and (max-width: 900px) {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .teamCont {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media only screen and (max-width: 600px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+
+      h3 {
+        margin: 0;
+      }
+    }
+  }
 `;

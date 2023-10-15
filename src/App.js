@@ -5,6 +5,7 @@ import Home from './pages/HomePage/Home';
 import Root from './routes/Root';
 import RolesPage from './pages/roles/rolesPage';
 import FooterPages from './routes/FooterPages';
+import AppStyle from './AppStyle';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,7 +26,11 @@ const App = () => {
     },
     { path: '/contact', element: <ContactUs /> },
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <AppStyle>
+      <RouterProvider router={router} />
+    </AppStyle>
+  );
 };
 
 export default App;

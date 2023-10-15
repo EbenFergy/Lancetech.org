@@ -8,7 +8,7 @@ const TeamStyle = styled.div`
     max-width: 1440px;
     margin: auto;
 
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 1000px) {
       padding: 8rem 2rem;
     }
   }
@@ -18,18 +18,6 @@ const TeamStyle = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(192px, 1fr));
     gap: 2.5rem;
     margin: 3rem 0;
-
-    .teamMember {
-      align-items: center;
-      height: 15rem;
-      border-radius: 5px;
-      overflow: hidden;
-
-      @media only screen and (max-width: 740px) {
-        display: flex;
-        justify-content: center;
-      }
-    }
 
     .memberName {
       font-weight: 600;
@@ -43,6 +31,22 @@ const TeamStyle = styled.div`
     .nameAndTitle {
       margin: 1rem 0;
     }
+  }
+`;
+
+export const TeamMemberStyle = styled.div`
+  align-items: center;
+  height: 15rem;
+  border-radius: 5px;
+  /* overflow: hidden; */
+  background-size: cover;
+  background: ${({ memberImage }) => `url(${memberImage})`};
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  @media only screen and (max-width: 903px) {
+    height: 20rem;
   }
 `;
 

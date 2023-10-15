@@ -89,7 +89,7 @@ const ContactUs = () => {
         </IconButton>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 3, width: '100%', maxWidth: '50rem' }}>
           <Icon sx={{ height: 'fit-content', fontSize: '4rem' }}>connect_without_contact</Icon>
-          <Typography variant="h3" sx={{ fontFamily: 'inherit' }}>
+          <Typography variant="h1" sx={{ fontFamily: 'inherit' }}>
             Let's level up your <br /> brand, together
           </Typography>
         </Box>

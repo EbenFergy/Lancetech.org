@@ -1,5 +1,5 @@
 import React from 'react';
-import TeamStyle from './TeamStyle';
+import TeamStyle, { TeamMemberStyle } from './TeamStyle';
 import { TeamList } from './__fixtures__/Team.fixtures.ts';
 
 const Team = () => {
@@ -13,9 +13,9 @@ const Team = () => {
         <div className="teamGallery">
           {TeamList.map(member => (
             <div>
-              <div className="teamMember">
-                <img src={member.memberImg} alt="teamMember" />
-              </div>
+              <TeamMemberStyle className="teamMember" memberImage={member.memberImg}>
+                {/* <img src={member.memberImg} alt="teamMember" /> */}
+              </TeamMemberStyle>
               <div className="nameAndTitle">
                 <div className="memberName">{member.memberName}</div>
                 <div className="memberTitle">{member.memberTitle}</div>

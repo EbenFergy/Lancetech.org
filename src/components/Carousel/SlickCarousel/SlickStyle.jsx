@@ -3,12 +3,15 @@ import { COLORS } from '../../../styles/COLORS.ts';
 
 export const SlickStyle = styled.div`
   position: relative;
-
   /* border: 2px solid red; */
   max-width: 100%;
   padding: 0 0 2rem;
   /* overflow: hidden; */
   /* background-color: #4a4a4a; */
+
+  @media only screen and (max-width: 800px) {
+    position: static;
+  }
 
   .slick-slider {
     position: static;
@@ -21,23 +24,27 @@ export const SlickStyle = styled.div`
   .slick-slide > div {
     margin: 0 10px;
   }
+
   .slick-list {
     margin: 0 5px;
     /* border: 2px solid blue; */
   }
 
   .slick-dots {
-    /* border: 2px solid blue; */
     text-align: left;
 
     li {
-      /* border: 2px solid blue; */
+      /* border: 2px solid blue;  */
       margin-right: 17px;
+
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
 
       button:before {
         content: '';
         /* border: 1px solid; */
-        background-color: ${COLORS.LightGrey};
+        background-color: ${COLORS.LightFont};
         height: 5px;
         width: 38px;
         border-radius: 5px;
@@ -48,14 +55,12 @@ export const SlickStyle = styled.div`
   li.slick-active button:before {
     background-color: ${COLORS.MainBlue};
   }
+
   .cards {
     display: flex;
     align-items: center;
     justify-content: center;
     height: min-content;
-    /* background-color: rgb(10, 23, 40); */
-    /* background-color: rgba(10, 25, 10, 0.9); */
-    /* background-color: rgba(145, 65, 145, 0.6); */
     overflow: hidden;
     border: 1px solid rgba(10, 25, 10, 1);
     /* border-radius: 5px; */
@@ -64,6 +69,7 @@ export const SlickStyle = styled.div`
     box-sizing: border-box;
     margin-bottom: 2rem;
   }
+
   #galleriaImg {
     width: 100%;
     object-fit: cover;

@@ -7,12 +7,6 @@ export const AboutStyle = styled.div`
   padding: 2rem 0;
   position: relative;
 
-  h1 {
-    font-size: ${FONTS.large};
-    font-weight: 700;
-    line-height: 64px;
-  }
-
   h2 {
     font-size: ${FONTS.medium};
     margin: 0 0 2rem 0;
@@ -40,6 +34,10 @@ export const AboutStyle = styled.div`
 
     span {
       color: ${COLORS.LightBlue};
+    }
+
+    @media only screen and (max-width: 650px) {
+      padding: 6rem 2rem;
     }
   }
 

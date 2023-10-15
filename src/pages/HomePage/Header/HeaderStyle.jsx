@@ -26,12 +26,13 @@ export const HeaderStyle = styled.div`
 
     @media only screen and (max-width: 900px) {
       font-size: 70px;
+      text-align: left;
     }
   }
 
   .headerTitle {
     @media only screen and (max-width: 900px) {
-      padding: 0 1rem;
+      padding: 0 2rem;
     }
   }
 
@@ -60,6 +61,28 @@ export const HeaderStyle = styled.div`
     animation: ${bouncingShape} 8s ease-in-out infinite;
     width: 20rem;
     height: 5rem;
+
+    @media only screen and (max-width: 600px) {
+      top: 6rem;
+      right: 49%;
+
+      width: 5rem;
+      height: 2rem;
+    }
+  }
+
+  .ellipseImg2 {
+    display: none;
+
+    @media only screen and (max-width: 600px) {
+      display: block;
+      animation: ${bouncingShape} 15s ease-in-out infinite;
+      bottom: 6rem;
+      left: 10%;
+
+      width: 2rem;
+      height: 10em;
+    }
   }
 
   .mobileWebAnime {
