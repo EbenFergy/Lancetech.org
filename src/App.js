@@ -1,5 +1,6 @@
-import { createBrowserRouter, RouterProvider, ScrollRestoration} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, useLocation} from 'react-router-dom';
 import About from './pages/about/About';
+import {useEffect} from 'react';
 import ContactUs from './pages/contactUs/ContactUs';
 import Home from './pages/HomePage/Home';
 import Root from './routes/Root';
@@ -9,6 +10,12 @@ import AppStyle from './AppStyle';
 
 
 const App = () => {
+ const {pathname} =useLocation();
+  
+  useEffect(()=>{
+    windows.scrollTo(0,0);
+  },[pathname])
+  
   const router = createBrowserRouter([
     {
       path: '',
@@ -29,7 +36,6 @@ const App = () => {
   ]);
   return (
     <AppStyle>
-    <ScrollRestoration/>
       <RouterProvider router={router} />
     </AppStyle>
   );
