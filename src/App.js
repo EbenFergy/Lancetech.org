@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, ScrollRestoration} from 'react-router-dom';
 import About from './pages/about/About';
 import ContactUs from './pages/contactUs/ContactUs';
 import Home from './pages/HomePage/Home';
@@ -6,6 +6,7 @@ import Root from './routes/Root';
 import RolesPage from './pages/roles/rolesPage';
 import FooterPages from './routes/FooterPages';
 import AppStyle from './AppStyle';
+
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,6 +29,7 @@ const App = () => {
   ]);
   return (
     <AppStyle>
+    <ScrollRestoration/>
       <RouterProvider router={router} />
     </AppStyle>
   );
